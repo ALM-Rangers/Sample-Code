@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://contoso.com/asmxservice/test" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://contoso.com/asmxservice/test" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://contoso.com/asmxservice/test">
+      <s:element name="ProcessSimpleAsmxRequestWrapped">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="r" type="tns:SimpleAsmxRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SimpleAsmxRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="B" type="s:string" />
+        </s:sequence>
+        <s:attribute name="A" type="s:int" use="required" />
+      </s:complexType>
+      <s:element name="ProcessSimpleAsmxRequestWrappedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessSimpleAsmxRequestWrappedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessMultipleParametersWrapped">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="b" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessMultipleParametersWrappedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessMultipleParametersWrappedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="r" type="tns:SimpleAsmxRequest" />
+      <s:element name="ProcessSimpleAsmxRequestBareResult" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessSimpleAsmxRequestWrappedSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessSimpleAsmxRequestWrapped" />
+  </wsdl:message>
+  <wsdl:message name="ProcessSimpleAsmxRequestWrappedSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessSimpleAsmxRequestWrappedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessMultipleParametersWrappedSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessMultipleParametersWrapped" />
+  </wsdl:message>
+  <wsdl:message name="ProcessMultipleParametersWrappedSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessMultipleParametersWrappedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessSimpleAsmxRequestBareSoapIn">
+    <wsdl:part name="r" element="tns:r" />
+  </wsdl:message>
+  <wsdl:message name="ProcessSimpleAsmxRequestBareSoapOut">
+    <wsdl:part name="ProcessSimpleAsmxRequestBareResult" element="tns:ProcessSimpleAsmxRequestBareResult" />
+  </wsdl:message>
+  <wsdl:portType name="TestAsmxServiceSoap">
+    <wsdl:operation name="ProcessSimpleAsmxRequestWrapped">
+      <wsdl:input message="tns:ProcessSimpleAsmxRequestWrappedSoapIn" />
+      <wsdl:output message="tns:ProcessSimpleAsmxRequestWrappedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMultipleParametersWrapped">
+      <wsdl:input message="tns:ProcessMultipleParametersWrappedSoapIn" />
+      <wsdl:output message="tns:ProcessMultipleParametersWrappedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSimpleAsmxRequestBare">
+      <wsdl:input message="tns:ProcessSimpleAsmxRequestBareSoapIn" />
+      <wsdl:output message="tns:ProcessSimpleAsmxRequestBareSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TestAsmxServiceSoap" type="tns:TestAsmxServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessSimpleAsmxRequestWrapped">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ProcessSimpleAsmxRequestWrapped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMultipleParametersWrapped">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ProcessMultipleParametersWrapped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSimpleAsmxRequestBare">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ProcessSimpleAsmxRequestBare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TestAsmxServiceSoap12" type="tns:TestAsmxServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessSimpleAsmxRequestWrapped">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ProcessSimpleAsmxRequestWrapped" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMultipleParametersWrapped">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ProcessMultipleParametersWrapped" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSimpleAsmxRequestBare">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ProcessSimpleAsmxRequestBare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TestAsmxService">
+    <wsdl:port name="TestAsmxServiceSoap" binding="tns:TestAsmxServiceSoap">
+      <soap:address location="http://localhost:51254/TestAsmxService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TestAsmxServiceSoap12" binding="tns:TestAsmxServiceSoap12">
+      <soap12:address location="http://localhost:51254/TestAsmxService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

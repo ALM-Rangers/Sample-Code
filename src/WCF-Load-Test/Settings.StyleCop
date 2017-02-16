@@ -1,0 +1,48 @@
+<StyleCopSettings Version="105">
+  <GlobalSettings>
+    <CollectionProperty Name="RecognizedWords">
+      <Value>asmx</Value>
+      <Value>callbacks</Value>
+      <Value>deserialized</Value>
+      <Value>deserializes</Value>
+      <Value>executable's</Value>
+      <Value>localhost</Value>
+      <Value>namespaced</Value>
+      <Value>nullable</Value>
+      <Value>recursing</Value>
+      <Value>serializable</Value>
+      <Value>serializer</Value>
+      <Value>ws</Value>
+      <Value>xmlsoap</Value>
+    </CollectionProperty>
+    <StringProperty Name="Culture">en-GB</StringProperty>
+  </GlobalSettings>
+  <Parsers>
+    <Parser ParserId="StyleCop.CSharp.CsParser">
+      <ParserSettings>
+        <BooleanProperty Name="AnalyzeDesignerFiles">False</BooleanProperty>
+      </ParserSettings>
+    </Parser>
+  </Parsers>
+  <Analyzers>
+    <Analyzer AnalyzerId="StyleCop.CSharp.NamingRules">
+      <AnalyzerSettings>
+        <CollectionProperty Name="Hungarian">
+          <Value>a</Value>
+          <Value>c</Value>
+          <Value>vs</Value>
+        </CollectionProperty>
+      </AnalyzerSettings>
+    </Analyzer>
+    <Analyzer AnalyzerId="StyleCop.CSharp.ReadabilityRules">
+      <Rules>
+        <Rule Name="UseShorthandForNullableTypes">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+      </Rules>
+      <AnalyzerSettings />
+    </Analyzer>
+  </Analyzers>
+</StyleCopSettings>

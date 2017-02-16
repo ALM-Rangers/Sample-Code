@@ -1,0 +1,2 @@
+2008-08-15T11:55:53.000000ZFirst comment for FullSampleTest.svclog
+2008-08-15T11:55:53.191192ZSecond comment

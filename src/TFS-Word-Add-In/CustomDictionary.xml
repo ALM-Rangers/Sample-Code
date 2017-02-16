@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+//*********************************************************
+//
+//    Copyright (c) Microsoft. All rights reserved.
+//    This code is licensed under the MIT License.
+//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF 
+//    ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+//    TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+//    PARTICULAR PURPOSE AND NONINFRINGEMENT.
+//
+//*********************************************************
+-->
+<Dictionary>
+  <Words>
+    <Unrecognized>
+      <!--<Word>cb</Word>-->
+    </Unrecognized>
+    <Recognized>
+      <Word>Tfs</Word>
+      <Word>Initialise</Word>
+      <Word>Insertable</Word>
+      <Word>wiql</Word>
+      <Word>xpath</Word>
+      <Word>Notifier</Word>
+    </Recognized>
+    <Deprecated>
+      <!--<Term PreferredAlternate="EnterpriseServices">ComPlus</Term>-->
+    </Deprecated>
+  </Words>
+  <Acronyms>
+    <CasingExceptions>
+      <!--<Acronym>wiql</Acronym>-->
+    </CasingExceptions>
+  </Acronyms>
+</Dictionary>

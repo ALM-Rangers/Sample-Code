@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ConfigurationSchema" targetNamespace="http://microsoft.com/wcfunit" elementFormDefault="qualified" xmlns="http://microsoft.com/wcfunit" xmlns:mstns="http://microsoft.com/wcfunit" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="WcfUnitConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="assembly" type="assemblyType" maxOccurs="unbounded" minOccurs="1" />
+        <xs:element name="soapActions" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="soapAction" type="soapActionType" minOccurs="0" maxOccurs="unbounded" />
+            </xs:sequence>
+            <xs:attribute name="soapActionMode" type="SoapActionMode" use="required" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="parser" type="typeType" maxOccurs="1" minOccurs="0" />
+      </xs:sequence>
+      <xs:attribute name="testMethodMode" type="TestMethodMode" use="required" />
+      <xs:attribute name="operationTimerMode" type="OperationTimerMode" use="required" />
+      <xs:attribute name="clientTrace" type="xs:boolean" default="true" use="optional" />
+      <xs:attribute name="serviceTrace" type="xs:boolean" default="false" use="optional" />
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="assemblyType">
+    <xs:sequence />
+    <xs:attribute name="fileName" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:complexType name="soapActionType">
+    <xs:sequence />
+    <xs:attribute name="action" type="xs:string" use="required" />
+  </xs:complexType>
+  <xs:simpleType name="SoapActionMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Include" />
+      <xs:enumeration value="Exclude" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TestMethodMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ScenarioMethodOnly" />
+      <xs:enumeration value="IncludeIndividualOperations" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OperationTimerMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="IncludeOperationTimers" />
+      <xs:enumeration value="NoOperationTimers" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="typeType">
+    <xs:sequence />
+    <xs:attribute name="assembly" type="xs:string" use="required" />
+    <xs:attribute name="type" type="xs:string" use="required" />
+  </xs:complexType>
+</xs:schema>

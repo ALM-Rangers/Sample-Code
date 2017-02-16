@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9803bcea-56d2-4528-a8cb-398a222b9e09" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="14587363-26b9-4868-8317-cb6ab1a58f8f" name="Model" requiredNamespace="Microsoft.Word4Tfs.Library.Model;" forbiddenNamespace="*" forbiddenNamespaceDependencies="Microsoft.Word4Tfs.Library.View;Microsoft.Word4Tfs.Library.Presenter">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="ac42a525-5aa3-41d5-8a83-7d9c60c48102" direction="Forward">
+          <layerMoniker Id="e1a49463-b637-40c1-a2c5-e95cdcdb77b8" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="0f76d559-02d3-49a3-9628-045816c5f83d" direction="Forward">
+          <layerMoniker Id="e9a360e6-0337-4bb0-a31d-6866a158cd5d" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="706fde8f-f57b-464e-8545-ca6df2d4371a" name="Model">
+          <ArtifactNode Label="Model" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/model/&quot;)">
+            <Category Ref="ProjectFolder" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=Factory)" Label="Factory" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=IFactory)" Label="IFactory" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=ITeamProject)" Label="ITeamProject" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=ITeamProjectDocument)" Label="ITeamProjectDocument" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=ITeamProjectDocumentFormatter)" Label="ITeamProjectDocumentFormatter" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=ITeamProjectDocumentManager)" Label="ITeamProjectDocumentManager" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=ITeamProjectQuery)" Label="ITeamProjectQuery" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=ModelResources)" Label="ModelResources" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=QueryUtilities)" Label="QueryUtilities" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.TeamFoundation Type=ITfsFieldDefinition)" Label="ITfsFieldDefinition" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.TeamFoundation Type=ITfsQuery)" Label="ITfsQuery" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.TeamFoundation Type=ITfsQueryFactory)" Label="ITfsQueryFactory" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.TeamFoundation Type=ITfsWorkItem)" Label="ITfsWorkItem" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.TeamFoundation Type=ITfsWorkItemLink)" Label="ITfsWorkItemLink" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.TeamFoundation Type=ITfsWorkItemStore)" Label="ITfsWorkItemStore" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.TeamFoundation Type=TfsFieldDefinition)" Label="TfsFieldDefinition" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.TeamFoundation Type=TfsQuery)" Label="TfsQuery" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.TeamFoundation Type=TfsQueryFactory)" Label="TfsQueryFactory" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.TeamFoundation Type=TfsWorkItem)" Label="TfsWorkItem" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.TeamFoundation Type=TfsWorkItemLink)" Label="TfsWorkItemLink" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.TeamFoundation Type=TfsWorkItemStore)" Label="TfsWorkItemStore" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=TeamProject)" Label="TeamProject" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=TeamProjectDocument)" Label="TeamProjectDocument" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=TeamProjectDocumentFormatter)" Label="TeamProjectDocumentFormatter" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=TeamProjectDocumentManager)" Label="TeamProjectDocumentManager" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=(Name=DocumentContext ParentType=TeamProjectDocumentManager))" Label="TeamProjectDocumentManager.DocumentContext" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=TeamProjectQuery)" Label="TeamProjectQuery" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.Word Type=CancellableDocumentOperationEventArgs)" Label="CancellableDocumentOperationEventArgs" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.Word Type=IWordApplication)" Label="IWordApplication" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model.Word Type=IWordDocument)" Label="IWordDocument" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=WorkItemTree)" Label="WorkItemTree" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=WorkItemTreeNode)" Label="WorkItemTreeNode" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="bf50995f-29fc-4cc3-85ee-1680b482b9e8" name="TeamProject.cs">
+          <ArtifactNode Label="TeamProject.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/Library/Model/TeamProject.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=TeamProject)" Label="TeamProject" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="d296568a-115e-42a1-a509-17f97a9684fb" name="ITeamProject.cs">
+          <ArtifactNode Label="ITeamProject.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/Library/Model/ITeamProject.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Model Type=ITeamProject)" Label="ITeamProject" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="96133b85-3783-4c77-997e-67925c5b0631" name="WordApplication.cs">
+          <ArtifactNode Label="WordApplication.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/wordaddin/wordapplication.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.Library.Model.Word Type=WordApplication)" Label="WordApplication" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="7833f318-168d-43af-85db-81117e0d5b9b" name="WordDocument.cs">
+          <ArtifactNode Label="WordDocument.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/wordaddin/worddocument.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.Library.Model.Word Type=WordDocument)" Label="WordDocument" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="f15f39b4-6744-4bab-a2fc-346632cc9136" name="Presenter" requiredNamespace="Microsoft.Word4Tfs.Library.Presenter" forbiddenNamespace="*">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="6587e12c-d625-417f-b49f-885dfc1365e3" direction="Forward">
+          <layerMoniker Id="14587363-26b9-4868-8317-cb6ab1a58f8f" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="a7a54dcb-7d05-4f21-aa46-b0b82e7d4f05" direction="Forward">
+          <layerMoniker Id="c3e4dda1-7232-423b-81d3-c15362ec8433" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="4d56800c-10a6-43e3-855d-9d2a234d3053" direction="Forward">
+          <layerMoniker Id="e9a360e6-0337-4bb0-a31d-6866a158cd5d" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="a95e51a8-8e92-445d-89c3-f4848868cb78" name="Presenter">
+          <ArtifactNode Label="Presenter" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/presenter/&quot;)">
+            <Category Ref="ProjectFolder" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=ITeamProjectPickerPresenter)" Label="ITeamProjectPickerPresenter" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=ITeamRibbonPresenter)" Label="ITeamRibbonPresenter" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=PresenterResources)" Label="PresenterResources" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=TeamProjectPickerPresenter)" Label="TeamProjectPickerPresenter" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=TeamRibbonPresenter)" Label="TeamRibbonPresenter" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="3650120e-e78d-4c1f-9a44-198ee0589c6e" name="WorkItemQueryAndLayoutPickerWizardPresenter.cs">
+          <ArtifactNode Label="WorkItemQueryAndLayoutPickerWizardPresenter.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/presenter/workitemqueryandlayoutpickerwizardpresenter.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=WorkItemQueryAndLayoutPickerWizardPresenter)" Label="WorkItemQueryAndLayoutPickerWizardPresenter" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="13815506-5e91-4f26-a255-5cb54b2df210" name="WorkItemQueryPickerWizardPagePresenter.cs">
+          <ArtifactNode Label="WorkItemQueryPickerWizardPagePresenter.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/presenter/workitemquerypickerwizardpagepresenter.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=WorkItemQueryPickerWizardPagePresenter)" Label="WorkItemQueryPickerWizardPagePresenter" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="da652115-5774-4b5e-8085-a9615be23951" name="LayoutPickerWizardPagePresenter.cs">
+          <ArtifactNode Label="LayoutPickerWizardPagePresenter.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/presenter/layoutpickerwizardpagepresenter.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=LayoutPickerWizardPagePresenter)" Label="LayoutPickerWizardPagePresenter" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="6dee62e3-6486-4595-b6e8-d7b1d69ca09f" name="IWorkItemQueryPickerWizardPagePresenter.cs">
+          <ArtifactNode Label="IWorkItemQueryPickerWizardPagePresenter.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/presenter/iworkitemquerypickerwizardpagepresenter.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=IWorkItemQueryPickerWizardPagePresenter)" Label="IWorkItemQueryPickerWizardPagePresenter" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="0628a886-a76c-45ec-a48c-4f10b968baa3" name="IWorkItemQueryAndLayoutPickerWizardPresenter.cs">
+          <ArtifactNode Label="IWorkItemQueryAndLayoutPickerWizardPresenter.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/presenter/iworkitemqueryandlayoutpickerwizardpresenter.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=IWorkItemQueryAndLayoutPickerWizardPresenter)" Label="IWorkItemQueryAndLayoutPickerWizardPresenter" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="fa211bc9-e17c-47f8-a099-29cedd849252" name="ILayoutPickerWizardPagePresenter.cs">
+          <ArtifactNode Label="ILayoutPickerWizardPagePresenter.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/presenter/ilayoutpickerwizardpagepresenter.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=ILayoutPickerWizardPagePresenter)" Label="ILayoutPickerWizardPagePresenter" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="f54a4846-3182-48c8-80f0-5aabeecdbe55" name="IWizardPagePresenter.cs">
+          <ArtifactNode Label="IWizardPagePresenter.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/presenter/iwizardpagepresenter.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=IWizardPagePresenter)" Label="IWizardPagePresenter" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="749f86f6-3fc1-47f2-8387-ac5828cbeaf5" name="IWizardPresenterBase.cs">
+          <ArtifactNode Label="IWizardPresenterBase.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/presenter/iwizardpresenterbase.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=IWizardPresenterBase)" Label="IWizardPresenterBase" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="b778200b-4dd0-4961-a77f-17c6472bbdd7" name="PresenterBase.cs">
+          <ArtifactNode Label="PresenterBase.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/presenter/presenterbase.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=PresenterBase)" Label="PresenterBase" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="afb05c34-bb68-4ace-a6b3-9c12f54ba84b" name="WizardPagePresenterBase.cs">
+          <ArtifactNode Label="WizardPagePresenterBase.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/presenter/wizardpagepresenterbase.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=WizardPagePresenterBase)" Label="WizardPagePresenterBase" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="23d8906c-b4ad-4112-9d19-38ade6305aa5" name="WizardPresenterBase.cs">
+          <ArtifactNode Label="WizardPresenterBase.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/presenter/wizardpresenterbase.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Presenter Type=(Name=WizardPresenterBase GenericParameterCount=1))" Label="WizardPresenterBase&lt;T&gt;" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="c3e4dda1-7232-423b-81d3-c15362ec8433" name="View" requiredNamespace="Microsoft.Word4Tfs.Library.View" forbiddenNamespace="*" forbiddenNamespaceDependencies="Microsoft.Word4Tfs.Library.Presenter;">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="8e6ad053-1fad-4654-9c93-2924b01d5a13" direction="Forward">
+          <layerMoniker Id="e9a360e6-0337-4bb0-a31d-6866a158cd5d" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="cad5a11f-fbaf-4781-85c5-73be77d60370" name="View">
+          <ArtifactNode Label="View" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/view/&quot;)">
+            <Category Ref="ProjectFolder" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=ITeamProjectPickerView)" Label="ITeamProjectPickerView" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=ITeamRibbonView)" Label="ITeamRibbonView" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=IViewBase)" Label="IViewBase" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=QueryItemEventArgs)" Label="QueryItemEventArgs" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=StandardDialogButton)" Label="StandardDialogButton" Category="CodeSchema_Enum">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=LayoutItemEventArgs)" Label="LayoutItemEventArgs" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=TeamRibbonButton)" Label="TeamRibbonButton" Category="CodeSchema_Enum">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="c700bed1-e77c-4cbe-b312-f3c6bb772da8" name="ILayoutPickerWizardPageView.cs">
+          <ArtifactNode Label="ILayoutPickerWizardPageView.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/view/ilayoutpickerwizardpageview.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=ILayoutPickerWizardPageView)" Label="ILayoutPickerWizardPageView" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="5b995420-d9cd-412d-86ab-472fda672d80" name="IViewBase.cs">
+          <ArtifactNode Label="IViewBase.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/view/iviewbase.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=IViewBase)" Label="IViewBase" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="654536cd-126d-42ef-b99d-b1eef5e85468" name="IWizardPageView.cs">
+          <ArtifactNode Label="IWizardPageView.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/view/iwizardpageview.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=IWizardPageView)" Label="IWizardPageView" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="58ad4e31-f569-488d-82e4-7400d2988bb3" name="IWizardViewBase.cs">
+          <ArtifactNode Label="IWizardViewBase.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/view/iwizardviewbase.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=IWizardViewBase)" Label="IWizardViewBase" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="27b4bd10-3513-4735-9793-1931765110de" name="WizardButton.cs">
+          <ArtifactNode Label="WizardButton.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/view/wizardbutton.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=WizardButton)" Label="WizardButton" Category="CodeSchema_Enum">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="3552f476-2f65-46ce-a158-d1fc88af551b" name="IWorkItemQueryAndLayoutPickerWizardView.cs">
+          <ArtifactNode Label="IWorkItemQueryAndLayoutPickerWizardView.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/view/iworkitemqueryandlayoutpickerwizardview.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=IWorkItemQueryAndLayoutPickerWizardView)" Label="IWorkItemQueryAndLayoutPickerWizardView" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="e57fc151-7bd3-44d1-9eca-436c8d5d20c6" name="IWorkItemQueryPickerWizardPageView.cs">
+          <ArtifactNode Label="IWorkItemQueryPickerWizardPageView.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/view/iworkitemquerypickerwizardpageview.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.View Type=IWorkItemQueryPickerWizardPageView)" Label="IWorkItemQueryPickerWizardPageView" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="697d3323-4d7e-4e35-b5a9-63fc4b93bf05" name="UI" requiredNamespace="Microsoft.Word4Tfs.WordAddIn" forbiddenNamespace="Microsoft.Word4Tfs.Library;Microsoft.Word4Tfs.Library.Model;Microsoft.Word4Tfs.Library.Presenter">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="5086107d-577c-4fdc-aa10-d06044c9abda" direction="Forward">
+          <layerMoniker Id="e1a49463-b637-40c1-a2c5-e95cdcdb77b8" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="13e1fc04-e2eb-4233-b121-d4ea381d8e71" direction="Forward">
+          <layerMoniker Id="c3e4dda1-7232-423b-81d3-c15362ec8433" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="d1cc31c5-671c-4ddd-8be9-90ada7cd455f" direction="Forward">
+          <layerMoniker Id="e9a360e6-0337-4bb0-a31d-6866a158cd5d" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="a36406c6-0de8-4ad6-8bfd-fba3c304340d" name="IconManager.cs">
+          <ArtifactNode Label="IconManager.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/WordAddIn/IconManager.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=IconManager)" Label="IconManager" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="e4956644-a1fb-4fc2-a874-10ee68d58b6f" name="ProgramIcon.cs">
+          <ArtifactNode Label="ProgramIcon.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/WordAddIn/ProgramIcon.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=ProgramIcon)" Label="ProgramIcon" Category="CodeSchema_Enum">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="e7f43fcc-126b-492a-9588-772228dc5d01" name="RightToLeftAwareMessageBox.cs">
+          <ArtifactNode Label="RightToLeftAwareMessageBox.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/WordAddIn/RightToLeftAwareMessageBox.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=RightToLeftAwareMessageBox)" Label="RightToLeftAwareMessageBox" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="448a1dbf-1867-477c-b353-95e063f8f4f8" name="TeamProjectPickerView.cs">
+          <ArtifactNode Label="TeamProjectPickerView.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/WordAddIn/TeamProjectPickerView.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=TeamProjectPickerView)" Label="TeamProjectPickerView" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="719d447d-0344-418c-97df-14263d497095" name="TeamRibbonView.cs">
+          <ArtifactNode Label="TeamRibbonView.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/WordAddIn/TeamRibbonView.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=TeamRibbonView)" Label="TeamRibbonView" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=ThisRibbonCollection)" Label="ThisRibbonCollection" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="2622d59c-12e2-45cc-a12b-efff0bde436f" name="TeamRibbonView.Designer.cs">
+          <ArtifactNode Label="TeamRibbonView.Designer.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/WordAddIn/TeamRibbonView.Designer.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=ThisRibbonCollection)" Label="ThisRibbonCollection" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=TeamRibbonView)" Label="TeamRibbonView" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="356a34b6-f202-4e32-ab47-fcbe99a07e30" name="TeamRibbonView.resx">
+          <ArtifactNode Label="TeamRibbonView.resx" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/WordAddIn/TeamRibbonView.resx&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="2197ebe1-f7dc-41e6-827d-9d21f8950f59" name="Utilities.cs">
+          <ArtifactNode Label="Utilities.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/WordAddIn/Utilities.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=Utilities)" Label="Utilities" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="ac945edb-607e-4d08-b292-00104cb18c49" name="LayoutPickerWizardPageView.cs">
+          <ArtifactNode Label="LayoutPickerWizardPageView.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/wordaddin/layoutpickerwizardpageview.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=LayoutPickerWizardPageView)" Label="LayoutPickerWizardPageView" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="55bcfe1b-c8d3-4961-8734-051ef117ce95" name="LayoutPickerWizardPageView.Designer.cs">
+          <ArtifactNode Label="LayoutPickerWizardPageView.Designer.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/wordaddin/layoutpickerwizardpageview.designer.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=LayoutPickerWizardPageView)" Label="LayoutPickerWizardPageView" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="b4a38662-8e72-427f-b6d7-4c349fa685c6" name="LayoutPickerWizardPageView.resx">
+          <ArtifactNode Label="LayoutPickerWizardPageView.resx" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/wordaddin/layoutpickerwizardpageview.resx&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="721f42a3-6104-4f53-847c-9908c46fd736" name="WorkItemQueryAndLayoutPickerWizardView.cs">
+          <ArtifactNode Label="WorkItemQueryAndLayoutPickerWizardView.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/wordaddin/workitemqueryandlayoutpickerwizardview.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=WorkItemQueryAndLayoutPickerWizardView)" Label="WorkItemQueryAndLayoutPickerWizardView" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="9de7d6bb-7526-4c35-b54c-e9f94fffabc7" name="WorkItemQueryAndLayoutPickerWizardView.Designer.cs">
+          <ArtifactNode Label="WorkItemQueryAndLayoutPickerWizardView.Designer.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/wordaddin/workitemqueryandlayoutpickerwizardview.designer.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=WorkItemQueryAndLayoutPickerWizardView)" Label="WorkItemQueryAndLayoutPickerWizardView" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="c855fa05-6afe-44de-8b72-b52a7d3a475b" name="WorkItemQueryAndLayoutPickerWizardView.resx">
+          <ArtifactNode Label="WorkItemQueryAndLayoutPickerWizardView.resx" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/wordaddin/workitemqueryandlayoutpickerwizardview.resx&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="747174a9-50fb-4fba-bdf0-c3dedb3646c1" name="WorkItemQueryPickerWizardPageView.cs">
+          <ArtifactNode Label="WorkItemQueryPickerWizardPageView.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/wordaddin/workitemquerypickerwizardpageview.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=WorkItemQueryPickerWizardPageView)" Label="WorkItemQueryPickerWizardPageView" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="c6276b12-2c1d-4eab-bd97-7f27519f7123" name="WorkItemQueryPickerWizardPageView.Designer.cs">
+          <ArtifactNode Label="WorkItemQueryPickerWizardPageView.Designer.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/wordaddin/workitemquerypickerwizardpageview.designer.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.WordAddIn Namespace=Microsoft.Word4Tfs.WordAddIn Type=WorkItemQueryPickerWizardPageView)" Label="WorkItemQueryPickerWizardPageView" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="beaa59bd-27d1-464f-9a3a-081508c95af4" name="WorkItemQueryPickerWizardPageView.resx">
+          <ArtifactNode Label="WorkItemQueryPickerWizardPageView.resx" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/wordaddin/workitemquerypickerwizardpageview.resx&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="faab6fac-f817-488e-955a-d7fbced8a855" name="Flow" requiredNamespace="Microsoft.Word4Tfs.Library" forbiddenNamespace="Microsoft.Word4Tfs.Library.Data;Microsoft.Word4Tfs.Library.Model;Microsoft.Word4Tfs.Library.View;Microsoft.Word4Tfs.LibraryPresenter;Microsoft.Word4Tfs.WordAddIn">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="36af2069-7ce9-4e53-b865-f655f81c68a8" direction="Forward">
+          <layerMoniker Id="14587363-26b9-4868-8317-cb6ab1a58f8f" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="1ff89846-4cd8-40b8-907f-d3d121b4dce9" direction="Forward">
+          <layerMoniker Id="f15f39b4-6744-4bab-a2fc-346632cc9136" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="ec5b4bef-4dee-40a8-949d-a9ab9a517fd6" direction="Forward">
+          <layerMoniker Id="e9a360e6-0337-4bb0-a31d-6866a158cd5d" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="27e7b941-670e-4bdd-b4eb-222023b04774" direction="Forward">
+          <layerMoniker Id="e1a49463-b637-40c1-a2c5-e95cdcdb77b8" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="87339888-2f51-48c1-bf4c-fda02d9d77f8" name="FlowController.cs">
+          <ArtifactNode Label="FlowController.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/Library/FlowController.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library Type=FlowController)" Label="FlowController" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="e1a49463-b637-40c1-a2c5-e95cdcdb77b8" name="General">
+      <references>
+        <reference Id="abc03553-a3d2-4de7-8342-2554e6617cd8" name="ILogger.cs">
+          <ArtifactNode Label="ILogger.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/Library/ILogger.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library Type=ILogger)" Label="ILogger" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="755811a3-788b-4c9f-a284-497e34e6861b" name="Logger.cs">
+          <ArtifactNode Label="Logger.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/Library/Logger.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library Type=Logger)" Label="Logger" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="89243a65-0e47-4dee-8d41-ae201c7c4308" name="Constants.cs">
+          <ArtifactNode Label="Constants.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/Library/Constants.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library Type=Constants)" Label="Constants" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="e9a360e6-0337-4bb0-a31d-6866a158cd5d" name="Data" requiredNamespace="Microsoft.Word4Tfs.Library.Data" forbiddenNamespace="*" forbiddenNamespaceDependencies="Microsoft.Word4Tfs.Library.Model;Microsoft.Word4Tfs.Library.Presenter;Microsoft.Word4Tfs.Library.View;">
+      <references>
+        <reference Id="a4a7b6ac-b542-4ed9-b492-fc5ee2873870" name="LayoutInformation.cs">
+          <ArtifactNode Label="LayoutInformation.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/projects/vsts rangers/word4tfs/source/main/library/data/styleinformation.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Data Type=LayoutInformation)" Label="LayoutInformation" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="c9fd1bb8-ca34-434c-a26a-17f55ba513f8" name="BuildingBlockInfo.cs">
+          <ArtifactNode Label="BuildingBlockInfo.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/Library/Data/BuildingBlockInfo.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Data Type=BuildingBlockInfo)" Label="BuildingBlockInfo" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="1031ffec-a338-4a6a-920a-cd6339206a83" name="TeamProjectInformation.cs1">
+          <ArtifactNode Label="TeamProjectInformation.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/Library/Data/TeamProjectInformation.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Data Type=TeamProjectInformation)" Label="TeamProjectInformation" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="31fa7dca-60fd-4464-b6de-e5c57c5b05c5" name="BuildingBlockName.cs">
+          <ArtifactNode Label="BuildingBlockName.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/Library/Data/BuildingBlockName.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Data Type=BuildingBlockName)" Label="BuildingBlockName" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="960f0061-44cf-42f5-96d2-99acc20ca2b6" name="LayoutInformation.cs1">
+          <ArtifactNode Label="LayoutInformation.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/Library/Data/LayoutInformation.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Data Type=LayoutInformation)" Label="LayoutInformation" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+        <reference Id="6f2b27ea-f9cf-452a-9f7c-665640b46187" name="QueryAndLayoutInformation.cs">
+          <ArtifactNode Label="QueryAndLayoutInformation.cs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/Projects/VSTS Rangers/Word4Tfs/Source/Main/Library/Data/QueryAndLayoutInformation.cs&quot;)">
+            <Category Ref="CodeSchema_SourceFile" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Microsoft.Word4Tfs.Library Namespace=Microsoft.Word4Tfs.Library.Data Type=QueryAndLayoutInformation)" Label="QueryAndLayoutInformation" Category="CodeSchema_Class">
+            <LinkCategory Ref="Contains" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

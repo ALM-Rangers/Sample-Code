@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://contoso.com/asmxservice/test" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://contoso.com/asmxservice/test" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://contoso.com/asmxservice/test">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:import namespace="http://tempuri.org/TypedDataSet.xsd" />
+      <s:import schemaLocation="http://localhost:8082/TestAsmxService.asmx?schema=AsmxTypedDataSet" namespace="http://tempuri.org/TypedDataSet.xsd" />
+      <s:element name="ProcessSimpleAsmxRequestWrapped">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="r" type="tns:SimpleAsmxRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SimpleAsmxRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="B" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Optional" type="s:int" />
+        </s:sequence>
+        <s:attribute name="A" type="s:int" use="required" />
+      </s:complexType>
+      <s:element name="ProcessSimpleAsmxRequestWrappedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessSimpleAsmxRequestWrappedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessMultipleParametersWrapped">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="b" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessMultipleParametersWrappedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessMultipleParametersWrappedResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="r" type="tns:SimpleAsmxRequest" />
+      <s:element name="ProcessSimpleAsmxRequestBareResult" type="s:string" />
+      <s:element name="SimpleTypes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="i" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="e" type="tns:ConsoleColor" />
+            <s:element minOccurs="0" maxOccurs="1" name="s" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="d" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="dt" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="g" type="s1:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="xqn" type="s:QName" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="ConsoleColor">
+        <s:restriction base="s:string">
+          <s:enumeration value="Black" />
+          <s:enumeration value="DarkBlue" />
+          <s:enumeration value="DarkGreen" />
+          <s:enumeration value="DarkCyan" />
+          <s:enumeration value="DarkRed" />
+          <s:enumeration value="DarkMagenta" />
+          <s:enumeration value="DarkYellow" />
+          <s:enumeration value="Gray" />
+          <s:enumeration value="DarkGray" />
+          <s:enumeration value="Blue" />
+          <s:enumeration value="Green" />
+          <s:enumeration value="Cyan" />
+          <s:enumeration value="Red" />
+          <s:enumeration value="Magenta" />
+          <s:enumeration value="Yellow" />
+          <s:enumeration value="White" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="SimpleTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SimpleTypesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WithNullableInt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="r" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WithNullableIntResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WithNullableIntResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ScalarArray">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ScalarArrayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ScalarArrayResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="XmlRequestMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="request" type="tns:XmlAsmxRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="XmlAsmxRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Element">
+            <s:complexType>
+              <s:sequence>
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+          <s:element minOccurs="0" maxOccurs="1" name="Nodes" type="tns:ArrayOfXmlNode" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfXmlNode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="XmlNode" nillable="true">
+            <s:complexType mixed="true">
+              <s:sequence>
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="XmlRequestMethodResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CollectionMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:CollectionsRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CollectionsRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ArrayList" type="tns:ArrayOfAnyType" />
+          <s:element minOccurs="0" maxOccurs="1" name="IntList" type="tns:ArrayOfInt" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestList" type="tns:ArrayOfSimpleAsmxRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestCollection" type="tns:ArrayOfSimpleAsmxRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="NonGenericEnumerableOnlyCollection" type="tns:ArrayOfAnyType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSimpleAsmxRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SimpleAsmxRequest" nillable="true" type="tns:SimpleAsmxRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CollectionMethodResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ProcessShape">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="shape" type="tns:AsmxShape" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AsmxShape">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Colour" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AsmxRectangle">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AsmxShape">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="VerticalSideLength" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="HorizontalSideLength" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="AsmxCircle">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AsmxShape">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Radius" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Ignored" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ProcessShapeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ProcessCircle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="circle" type="tns:AsmxCircle" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessCircleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ProcessDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessDataSetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessDataSetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessDataSetWithMoreData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="1" maxOccurs="1" name="i" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessDataSetWithMoreDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProcessDataSetWithMoreDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessTypedDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data">
+              <s:complexType>
+                <s:sequence>
+                  <s:any namespace="http://tempuri.org/TypedDataSet.xsd" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProcessTypedDataSetResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ProcessCompoundDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:AsmxCompoundWithDataSet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AsmxCompoundWithDataSet">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Data">
+            <s:complexType>
+              <s:sequence>
+                <s:element ref="s:schema" />
+                <s:any />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ProcessCompoundDataSetResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ProcessCompoundTypedDataSet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:AsmxCompoundWithTypedDataSet" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AsmxCompoundWithTypedDataSet">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Data">
+            <s:complexType>
+              <s:sequence>
+                <s:any namespace="http://tempuri.org/TypedDataSet.xsd" />
+              </s:sequence>
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ProcessCompoundTypedDataSetResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ProcessSimpleAsmxRequestWrappedSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessSimpleAsmxRequestWrapped" />
+  </wsdl:message>
+  <wsdl:message name="ProcessSimpleAsmxRequestWrappedSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessSimpleAsmxRequestWrappedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessMultipleParametersWrappedSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessMultipleParametersWrapped" />
+  </wsdl:message>
+  <wsdl:message name="ProcessMultipleParametersWrappedSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessMultipleParametersWrappedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessSimpleAsmxRequestBareSoapIn">
+    <wsdl:part name="r" element="tns:r" />
+  </wsdl:message>
+  <wsdl:message name="ProcessSimpleAsmxRequestBareSoapOut">
+    <wsdl:part name="ProcessSimpleAsmxRequestBareResult" element="tns:ProcessSimpleAsmxRequestBareResult" />
+  </wsdl:message>
+  <wsdl:message name="SimpleTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:SimpleTypes" />
+  </wsdl:message>
+  <wsdl:message name="SimpleTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:SimpleTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="WithNullableIntSoapIn">
+    <wsdl:part name="parameters" element="tns:WithNullableInt" />
+  </wsdl:message>
+  <wsdl:message name="WithNullableIntSoapOut">
+    <wsdl:part name="parameters" element="tns:WithNullableIntResponse" />
+  </wsdl:message>
+  <wsdl:message name="ScalarArraySoapIn">
+    <wsdl:part name="parameters" element="tns:ScalarArray" />
+  </wsdl:message>
+  <wsdl:message name="ScalarArraySoapOut">
+    <wsdl:part name="parameters" element="tns:ScalarArrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="XmlRequestMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:XmlRequestMethod" />
+  </wsdl:message>
+  <wsdl:message name="XmlRequestMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:XmlRequestMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="CollectionMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:CollectionMethod" />
+  </wsdl:message>
+  <wsdl:message name="CollectionMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:CollectionMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessShapeSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessShape" />
+  </wsdl:message>
+  <wsdl:message name="ProcessShapeSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessShapeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessCircleSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessCircle" />
+  </wsdl:message>
+  <wsdl:message name="ProcessCircleSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessCircleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessDataSet" />
+  </wsdl:message>
+  <wsdl:message name="ProcessDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessDataSetWithMoreDataSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessDataSetWithMoreData" />
+  </wsdl:message>
+  <wsdl:message name="ProcessDataSetWithMoreDataSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessDataSetWithMoreDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessTypedDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessTypedDataSet" />
+  </wsdl:message>
+  <wsdl:message name="ProcessTypedDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessTypedDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessCompoundDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessCompoundDataSet" />
+  </wsdl:message>
+  <wsdl:message name="ProcessCompoundDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessCompoundDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProcessCompoundTypedDataSetSoapIn">
+    <wsdl:part name="parameters" element="tns:ProcessCompoundTypedDataSet" />
+  </wsdl:message>
+  <wsdl:message name="ProcessCompoundTypedDataSetSoapOut">
+    <wsdl:part name="parameters" element="tns:ProcessCompoundTypedDataSetResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TestAsmxServiceSoap">
+    <wsdl:operation name="ProcessSimpleAsmxRequestWrapped">
+      <wsdl:input message="tns:ProcessSimpleAsmxRequestWrappedSoapIn" />
+      <wsdl:output message="tns:ProcessSimpleAsmxRequestWrappedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMultipleParametersWrapped">
+      <wsdl:input message="tns:ProcessMultipleParametersWrappedSoapIn" />
+      <wsdl:output message="tns:ProcessMultipleParametersWrappedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSimpleAsmxRequestBare">
+      <wsdl:input message="tns:ProcessSimpleAsmxRequestBareSoapIn" />
+      <wsdl:output message="tns:ProcessSimpleAsmxRequestBareSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SimpleTypes">
+      <wsdl:input message="tns:SimpleTypesSoapIn" />
+      <wsdl:output message="tns:SimpleTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WithNullableInt">
+      <wsdl:input message="tns:WithNullableIntSoapIn" />
+      <wsdl:output message="tns:WithNullableIntSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ScalarArray">
+      <wsdl:input message="tns:ScalarArraySoapIn" />
+      <wsdl:output message="tns:ScalarArraySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="XmlRequestMethod">
+      <wsdl:input message="tns:XmlRequestMethodSoapIn" />
+      <wsdl:output message="tns:XmlRequestMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CollectionMethod">
+      <wsdl:input message="tns:CollectionMethodSoapIn" />
+      <wsdl:output message="tns:CollectionMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessShape">
+      <wsdl:input message="tns:ProcessShapeSoapIn" />
+      <wsdl:output message="tns:ProcessShapeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCircle">
+      <wsdl:input message="tns:ProcessCircleSoapIn" />
+      <wsdl:output message="tns:ProcessCircleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDataSet">
+      <wsdl:input message="tns:ProcessDataSetSoapIn" />
+      <wsdl:output message="tns:ProcessDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDataSetWithMoreData">
+      <wsdl:input message="tns:ProcessDataSetWithMoreDataSoapIn" />
+      <wsdl:output message="tns:ProcessDataSetWithMoreDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTypedDataSet">
+      <wsdl:input message="tns:ProcessTypedDataSetSoapIn" />
+      <wsdl:output message="tns:ProcessTypedDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCompoundDataSet">
+      <wsdl:input message="tns:ProcessCompoundDataSetSoapIn" />
+      <wsdl:output message="tns:ProcessCompoundDataSetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCompoundTypedDataSet">
+      <wsdl:input message="tns:ProcessCompoundTypedDataSetSoapIn" />
+      <wsdl:output message="tns:ProcessCompoundTypedDataSetSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TestAsmxServiceSoap" type="tns:TestAsmxServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessSimpleAsmxRequestWrapped">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ProcessSimpleAsmxRequestWrapped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMultipleParametersWrapped">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ProcessMultipleParametersWrapped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSimpleAsmxRequestBare">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ProcessSimpleAsmxRequestBare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SimpleTypes">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/SimpleTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithNullableInt">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/WithNullableInt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScalarArray">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ScalarArray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XmlRequestMethod">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/XmlRequestMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectionMethod">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/CollectionMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessShape">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ProcessShape" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCircle">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ProcessCircle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDataSet">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ProcessDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDataSetWithMoreData">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ProcessDataSetWithMoreData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTypedDataSet">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ProcessTypedDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCompoundDataSet">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ProcessCompoundDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCompoundTypedDataSet">
+      <soap:operation soapAction="http://contoso.com/asmxservice/test/ProcessCompoundTypedDataSet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TestAsmxServiceSoap12" type="tns:TestAsmxServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ProcessSimpleAsmxRequestWrapped">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ProcessSimpleAsmxRequestWrapped" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMultipleParametersWrapped">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ProcessMultipleParametersWrapped" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessSimpleAsmxRequestBare">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ProcessSimpleAsmxRequestBare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SimpleTypes">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/SimpleTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithNullableInt">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/WithNullableInt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScalarArray">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ScalarArray" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="XmlRequestMethod">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/XmlRequestMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CollectionMethod">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/CollectionMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessShape">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ProcessShape" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCircle">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ProcessCircle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDataSet">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ProcessDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDataSetWithMoreData">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ProcessDataSetWithMoreData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessTypedDataSet">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ProcessTypedDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCompoundDataSet">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ProcessCompoundDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessCompoundTypedDataSet">
+      <soap12:operation soapAction="http://contoso.com/asmxservice/test/ProcessCompoundTypedDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TestAsmxService">
+    <wsdl:port name="TestAsmxServiceSoap" binding="tns:TestAsmxServiceSoap">
+      <soap:address location="http://localhost:8082/TestAsmxService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TestAsmxServiceSoap12" binding="tns:TestAsmxServiceSoap12">
+      <soap12:address location="http://localhost:8082/TestAsmxService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

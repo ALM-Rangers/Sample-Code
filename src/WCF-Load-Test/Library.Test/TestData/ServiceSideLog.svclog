@@ -1,0 +1,155 @@
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-07-28T16:35:38.6420000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="ConsoleHost" ProcessID="4764" ThreadID="4" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-07-28T09:35:38.5930000-07:00" Source="ServiceLevelReceiveRequest" Type="System.ServiceModel.Channels.BufferedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <HttpRequest>
+            <Method>POST</Method>
+            <QueryString></QueryString>
+            <WebHeaders>
+              <SOAPAction>"http://tempuri.org/IArithmetic/Add"</SOAPAction>
+              <Connection>Keep-Alive</Connection>
+              <Content-Length>149</Content-Length>
+              <Content-Type>text/xml; charset=utf-8</Content-Type>
+              <Expect>100-continue</Expect>
+              <Host>localhost:8081</Host>
+            </WebHeaders>
+          </HttpRequest>
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header>
+              <To s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://localhost:8081/arithmetic/basic</To>
+              <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IArithmetic/Add</Action>
+            </s:Header>
+            <s:Body>
+              <Add xmlns="http://tempuri.org/">
+                <a>1</a>
+                <b>1</b>
+              </Add>
+            </s:Body>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-07-28T16:35:38.6740000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="ConsoleHost" ProcessID="4764" ThreadID="4" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-07-28T09:35:38.6720000-07:00" Source="ServiceLevelSendReply" Type="System.ServiceModel.Channels.BodyWriterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header>
+              <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IArithmetic/AddResponse</Action>
+            </s:Header>
+            <s:Body>
+              <AddResponse xmlns="http://tempuri.org/">
+                <AddResult>2</AddResult>
+              </AddResponse>
+            </s:Body>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-07-28T16:35:40.5880000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="ConsoleHost" ProcessID="4764" ThreadID="4" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-07-28T09:35:40.5870000-07:00" Source="ServiceLevelReceiveRequest" Type="System.ServiceModel.Channels.BufferedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <HttpRequest>
+            <Method>POST</Method>
+            <QueryString></QueryString>
+            <WebHeaders>
+              <SOAPAction>"http://tempuri.org/IArithmetic/Sub"</SOAPAction>
+              <Content-Length>149</Content-Length>
+              <Content-Type>text/xml; charset=utf-8</Content-Type>
+              <Expect>100-continue</Expect>
+              <Host>localhost:8081</Host>
+            </WebHeaders>
+          </HttpRequest>
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header>
+              <To s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://localhost:8081/arithmetic/basic</To>
+              <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IArithmetic/Sub</Action>
+            </s:Header>
+            <s:Body>
+              <Sub xmlns="http://tempuri.org/">
+                <a>2</a>
+                <b>1</b>
+              </Sub>
+            </s:Body>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-07-28T16:35:40.5900000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="ConsoleHost" ProcessID="4764" ThreadID="4" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-07-28T09:35:40.5900000-07:00" Source="ServiceLevelSendReply" Type="System.ServiceModel.Channels.BodyWriterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header>
+              <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IArithmetic/SubResponse</Action>
+            </s:Header>
+            <s:Body>
+              <SubResponse xmlns="http://tempuri.org/">
+                <SubResult>1</SubResult>
+              </SubResponse>
+            </s:Body>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>

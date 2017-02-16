@@ -1,0 +1,1 @@
+wsdl /namespace:AsmxProxy http://localhost:8082/TestAsmxService.asmx

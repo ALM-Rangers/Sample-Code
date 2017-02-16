@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15CAC15B-9E42-4E4B-A45C-96E25A95D1B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Word4Tfs.Library</RootNamespace>
+    <AssemblyName>Microsoft.Word4Tfs.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <NoWarn>1762</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>TemporaryKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug-x86|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug-x86\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <NoWarn>1762</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Microsoft.Word4Tfs.Library.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-x86|AnyCPU'">
+    <OutputPath>bin\Release-x86\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisLogFile>bin\Release\Microsoft.Word4Tfs.Library.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Signed-x64|AnyCPU'">
+    <OutputPath>bin\Signed-x64\</OutputPath>
+    <DefineConstants>CODE_ANALYSIS;CODE_ANALYSIS;TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisLogFile>bin\Release\Microsoft.Word4Tfs.Library.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 12.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\ExternalDependencies\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Services.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="Data\BuildingBlockInfo.cs" />
+    <Compile Include="Data\BuildingBlockDefinition.cs" />
+    <Compile Include="Data\DocumentHandle.cs" />
+    <Compile Include="Data\QueryAndLayoutInformation.cs" />
+    <Compile Include="Data\QueryWorkItems.cs" />
+    <Compile Include="Data\TeamProjectInformation.cs" />
+    <Compile Include="FlowController.cs" />
+    <Compile Include="FlowControllerResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlowControllerResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="ILogger.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Data\BuildingBlockName.cs" />
+    <Compile Include="Model\Factory.cs" />
+    <Compile Include="Data\LayoutInformation.cs" />
+    <Compile Include="Model\ILayoutDefinitionFormatter.cs" />
+    <Compile Include="Model\ILowLevelSettings.cs" />
+    <Compile Include="Model\ISettings.cs" />
+    <Compile Include="Model\IWorkItemLayout.cs" />
+    <Compile Include="Model\ITeamProjectTemplate.cs" />
+    <Compile Include="Model\LayoutDefinitionFormatter.cs" />
+    <Compile Include="Model\LowLevelSettings.cs" />
+    <Compile Include="Model\Settings.cs" />
+    <Compile Include="Model\UserMessageEventArgs.cs" />
+    <Compile Include="Model\Windows\DirectoryAbstraction.cs" />
+    <Compile Include="Model\Windows\FileAbstraction.cs" />
+    <Compile Include="Model\Windows\IDirectory.cs" />
+    <Compile Include="Model\Windows\IFile.cs" />
+    <Compile Include="Model\WorkItemLayout.cs" />
+    <Compile Include="Model\Word\NullWordTemplate.cs" />
+    <Compile Include="Model\TeamProjectTemplate.cs" />
+    <Compile Include="Model\Word\BookmarkManager.cs" />
+    <Compile Include="Model\Word\IBookmarkManager.cs" />
+    <Compile Include="Model\IFactory.cs" />
+    <Compile Include="Model\IQueryAndLayoutManager.cs" />
+    <Compile Include="Model\ITeamProject.cs" />
+    <Compile Include="Model\ITeamProjectDocumentFormatter.cs" />
+    <Compile Include="Model\ITeamProjectDocumentManager.cs" />
+    <Compile Include="Model\ITeamProjectDocumentVerifier.cs" />
+    <Compile Include="Model\ITeamProjectQuery.cs" />
+    <Compile Include="Model\ModelResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\QueryAndLayoutManager.cs" />
+    <Compile Include="Model\TeamFoundation\ITfsFieldDefinition.cs" />
+    <Compile Include="Model\TeamFoundation\ITfsQuery.cs" />
+    <Compile Include="Model\TeamFoundation\TfsWorkItemDisconnected.cs" />
+    <Compile Include="Model\TeamProjectDocumentVerifier.cs" />
+    <Compile Include="Model\Word\IWordApplication.cs" />
+    <Compile Include="Model\Word\IWordDocument.cs" />
+    <Compile Include="Model\QueryUtilities.cs" />
+    <Compile Include="Model\TeamFoundation\ITfsWorkItem.cs" />
+    <Compile Include="Model\TeamFoundation\ITfsWorkItemLink.cs" />
+    <Compile Include="Model\TeamFoundation\ITfsWorkItemStore.cs" />
+    <Compile Include="Model\TeamFoundation\TfsFieldDefinition.cs" />
+    <Compile Include="Model\TeamFoundation\ITfsQueryFactory.cs" />
+    <Compile Include="Model\TeamFoundation\TfsQueryFactory.cs" />
+    <Compile Include="Model\TeamFoundation\TfsWorkItem.cs" />
+    <Compile Include="Model\TeamFoundation\TfsWorkItemLink.cs" />
+    <Compile Include="Model\TeamFoundation\TfsWorkItemStore.cs" />
+    <Compile Include="Model\TeamProject.cs" />
+    <Compile Include="Model\TeamFoundation\TfsQuery.cs" />
+    <Compile Include="Model\TeamProjectDocumentFormatter.cs" />
+    <Compile Include="Model\TeamProjectDocumentManager.cs" />
+    <Compile Include="Model\TeamProjectQuery.cs" />
+    <Compile Include="Model\Word\IWordTemplate.cs" />
+    <Compile Include="Model\WorkItemManager.cs" />
+    <Compile Include="Model\WorkItemTree.cs" />
+    <Compile Include="Model\WorkItemTreeNode.cs" />
+    <Compile Include="Presenter\ILayoutDesignerPresenter.cs" />
+    <Compile Include="View\IWaitNotifier.cs" />
+    <Compile Include="Presenter\LayoutDesignerPresenter.cs" />
+    <Compile Include="Presenter\LayoutPickerWizardPagePresenter.cs" />
+    <Compile Include="Presenter\ILayoutPickerWizardPagePresenter.cs" />
+    <Compile Include="Presenter\ITeamProjectPickerPresenter.cs" />
+    <Compile Include="Presenter\ITeamRibbonPresenter.cs" />
+    <Compile Include="Presenter\IWizardPagePresenter.cs" />
+    <Compile Include="Presenter\IWizardPresenterBase.cs" />
+    <Compile Include="Presenter\IWorkItemQueryAndLayoutPickerWizardPresenter.cs" />
+    <Compile Include="Presenter\IWorkItemQueryPickerWizardPagePresenter.cs" />
+    <Compile Include="Presenter\PresenterBase.cs" />
+    <Compile Include="Presenter\PresenterResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PresenterResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter\TeamProjectPickerPresenter.cs" />
+    <Compile Include="Presenter\TeamRibbonPresenter.cs" />
+    <Compile Include="Model\ITeamProjectDocument.cs" />
+    <Compile Include="Model\TeamProjectDocument.cs" />
+    <Compile Include="Presenter\WizardPagePresenterBase.cs" />
+    <Compile Include="Presenter\WizardPresenterBase.cs" />
+    <Compile Include="Presenter\WorkItemQueryAndLayoutPickerWizardPresenter.cs" />
+    <Compile Include="Presenter\WorkItemQueryPickerWizardPagePresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UiMessageType.cs" />
+    <Compile Include="Utilities.cs" />
+    <Compile Include="View\FieldDefinitionEventArgs.cs" />
+    <Compile Include="View\ILayoutDesignerView.cs" />
+    <Compile Include="View\ILayoutPickerWizardPageView.cs" />
+    <Compile Include="View\IMessageBoxView.cs" />
+    <Compile Include="View\ITeamProjectPickerView.cs" />
+    <Compile Include="View\ITeamRibbonView.cs" />
+    <Compile Include="View\IViewBase.cs" />
+    <Compile Include="View\IWizardPageView.cs" />
+    <Compile Include="View\IWizardViewBase.cs" />
+    <Compile Include="View\IWorkItemQueryAndLayoutPickerWizardView.cs" />
+    <Compile Include="View\IWorkItemQueryPickerWizardPageView.cs" />
+    <Compile Include="View\LayoutDesignerControl.cs" />
+    <Compile Include="View\QueryItemEventArgs.cs" />
+    <Compile Include="View\RenameEventArgs.cs" />
+    <Compile Include="View\StandardDialogButton.cs" />
+    <Compile Include="View\LayoutItemEventArgs.cs" />
+    <Compile Include="View\TeamRibbonButton.cs" />
+    <Compile Include="View\WizardButton.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CustomDictionary.xml">
+      <Link>CustomDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FlowControllerResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FlowControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\ModelResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ModelResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presenter\PresenterResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PresenterResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TemporaryKey.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

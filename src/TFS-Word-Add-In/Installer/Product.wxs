@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+//*********************************************************
+//
+//    Copyright (c) Microsoft. All rights reserved.
+//    This code is licensed under the MIT License.
+//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF 
+//    ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+//    TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+//    PARTICULAR PURPOSE AND NONINFRINGEMENT.
+//
+//*********************************************************
+-->
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+
+  <?define UpgradeCode = "C7D481B9-F387-44FB-954E-CDC4A83FB960" ?>
+  <?define Version = "1.2.14.0624" ?>
+  
+  <?if $(var.Platform) = "x64" ?>
+  <?define ProductId = "77FF601B-4285-4999-BEB4-5F22774188A9" ?>
+  <?define ProgramFilesFolder = "ProgramFiles64Folder" ?>
+  <?define ProgramFilesFolderX86 = "ProgramFilesFolder" ?>
+  <?define SystemFolder = "System64Folder" ?>
+  <?define SystemFolderX86 = "SystemFolder" ?>
+  <?define SoftwareKey = "Software" ?>
+  <?define SoftwareKeyX86 = "Software\Wow6432Node" ?>
+  <?define FrameworkKey = "Software" ?>
+  <?else?>
+  <?define ProductId = "C22CA37F-8FF7-4C8C-ACB8-FC525FB5054B" ?>
+  <?define ProgramFilesFolder = "ProgramFilesFolder" ?>
+  <?define ProgramFilesFolderX86 = "ProgramFilesFolder" ?>
+  <?define SystemFolder = "SystemFolder" ?>
+  <?define SystemFolderX86 = "SystemFolder" ?>
+  <?define SoftwareKey = "Software" ?>
+  <?define SoftwareKeyX86 = "Software" ?>
+  <?endif?>
+
+  <?if $(var.Configuration) = "Signed-x86" or $(var.Configuration) = "Signed-x64"?>
+  <?define LibraryBinaryPath = "$(var.SolutionDir)SignedBinaries\" ?>
+  <?define WordAddInBinaryPath = "$(var.SolutionDir)SignedBinaries\" ?>
+  <?else?>
+  <?define LibraryBinaryPath = "$(var.Library.TargetDir)" ?>
+  <?define WordAddInBinaryPath = "$(var.WordAddIn.TargetDir)" ?>
+  <?endif?>
+
+  <Product
+    Id="*"
+    Name='!(loc.Name) ($(var.Platform))'
+    Language='!(loc.Language)'
+    Version='$(var.Version)'
+    Manufacturer='Microsoft Corporation'
+    UpgradeCode="$(var.UpgradeCode)">
+    <Package
+      Id='*'
+      Description='!(loc.Description)'
+      Comments='!(loc.Comments)'
+      Keywords='!(loc.Keywords), $(var.Platform)'
+      Languages='!(loc.PackageLanguage)'
+      Manufacturer='Microsoft Corporation'
+      Platform='$(var.Platform)'
+      InstallerVersion='200'
+      InstallPrivileges='elevated'
+      Compressed='yes' />
+
+    <UIRef Id='WixUI_Minimal'/>
+    <WixVariable Id="WixUILicenseRtf" Value="Eula.rtf" />
+
+
+    <Upgrade Id="$(var.UpgradeCode)">
+      <UpgradeVersion Minimum="$(var.Version)" IncludeMinimum="yes" OnlyDetect="yes" Property="NEWERVERSIONDETECTED" />
+      <UpgradeVersion Minimum="0.0.0" Maximum="$(var.Version)" IncludeMinimum="yes" IncludeMaximum="no" Property="OLDERVERSIONBEINGUPGRADED" />
+    </Upgrade>
+
+    <Condition Message="The same or a later version of [ProductName] is already installed.">Not NEWERVERSIONDETECTED</Condition>
+
+    <Media Id="1" Cabinet="main.cab" EmbedCab="yes" />
+
+    <Property Id='FXINSTALLED' Value='0' Secure='yes'>
+      <RegistrySearch Id='FxInstalledRegistry'
+              Key='SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full'
+              Name='Release'
+              Root='HKLM'
+              Type='raw'/>
+    </Property>
+    <Condition Message='!(loc.ErrorFXRequirement)'>Installed OR FXINSTALLED>="#378675"</Condition>
+
+    <Property Id='VSTORUNTIMEREDIST' Secure='yes'>
+      <RegistrySearch Id='VstoInstalledRegistry'
+              Key='SOFTWARE\Microsoft\VSTO Runtime Setup\v4R'
+              Name='Version'
+              Root='HKLM'
+              Type='raw'
+              Win64='no'/>
+    </Property>
+    <Condition Message='!(loc.ErrorVSTORequirement)'><![CDATA[Installed OR VSTORUNTIMEREDIST>"10.0.30319"]]></Condition>
+
+    <Property Id='TE2013INSTALLED' Value='0' Secure='yes'>
+      <RegistrySearch Id='TE2013InstalledRegistry'
+              Key='SOFTWARE\Microsoft\TeamFoundationServer\12.0\InstalledComponents\ObjectModel'
+              Name='Installed'
+              Root='HKLM'
+              Type='raw'
+              Win64='no'/>
+    </Property>
+
+    <Condition Message='!(loc.ErrorTERequirement)'>Installed OR TE2013INSTALLED="#1"</Condition>
+
+    <Property Id='WORD201332INSTALLED' Secure='yes'>
+      <RegistrySearch Id='WORD201332InstalledRegistry'
+              Key='SOFTWARE\Microsoft\Office\15.0\Word\InstallRoot'
+              Name='Path'
+              Root='HKLM'
+              Type='raw'
+              Win64='no'/>
+    </Property>
+    <Property Id='WORD201364INSTALLED' Secure='yes'>
+      <RegistrySearch Id='WORD201364InstalledRegistry'
+              Key='SOFTWARE\Microsoft\Office\15.0\Word\InstallRoot'
+              Name='Path'
+              Root='HKLM'
+              Type='raw'/>
+    </Property>
+    <Property Id='WORD201032INSTALLED' Secure='yes'>
+      <RegistrySearch Id='WORD201032InstalledRegistry'
+              Key='SOFTWARE\Microsoft\Office\14.0\Word\InstallRoot'
+              Name='Path'
+              Root='HKLM'
+              Type='raw'
+              Win64='no'/>
+    </Property>
+    <Property Id='WORD201064INSTALLED' Secure='yes'>
+      <RegistrySearch Id='WORD201064InstalledRegistry'
+              Key='SOFTWARE\Microsoft\Office\14.0\Word\InstallRoot'
+              Name='Path'
+              Root='HKLM'
+              Type='raw'/>
+    </Property>
+    <Property Id='WORD2007INSTALLED' Secure='yes'>
+      <RegistrySearch Id='WORD2007InstalledRegistry'
+              Key='SOFTWARE\Microsoft\Office\12.0\Word\InstallRoot'
+              Name='Path'
+              Root='HKLM'
+              Type='raw'
+              Win64='no'/>
+    </Property>
+    <Property Id='WORD2007SP1INSTALLED' Secure='yes'>
+      <RegistrySearch Id='WORD2007SP1InstalledRegistry'
+              Key='SOFTWARE\Microsoft\Office\12.0\Common\ProductVersion'
+              Name='LastProduct'
+              Root='HKLM'
+              Type='raw'
+              Win64='no'/>
+    </Property>
+    <Condition Message='!(loc.ErrorWordRequirement)'>Installed OR WORD201332INSTALLED OR WORD201364INSTALLED OR WORD201032INSTALLED OR WORD201064INSTALLED OR (WORD2007INSTALLED AND (WORD2007SP1INSTALLED &gt;= "12.0.6211.1000"))</Condition>
+
+    <Property Id="HOTFIX976477" Secure='yes'>
+      <DirectorySearch Id="SystemFolderDriverVersion" Path="[CommonFilesFolder]\Microsoft Shared\OFFICE12">
+        <FileSearch Name="mso.dll" MinVersion="12.0.6520.4999"/>
+      </DirectorySearch>
+    </Property>
+    <Condition Message='!(loc.ErrorHotFix976477Requirement)'>Installed OR NOT WORD2007INSTALLED OR (WORD2007INSTALLED AND HOTFIX976477)</Condition>
+
+    <Property Id="HOTFIX976477ENABLED" Secure='yes'>
+      <RegistrySearch Id='HotFix976477EnabledRegistry'
+              Key='SOFTWARE\Microsoft\Office\12.0\Common\General'
+              Name='EnableLocalMachineVSTO'
+              Root='HKLM'
+              Type='raw'
+              Win64='no'/>
+    </Property>
+
+    <!-- The condition below is to make sure we give this error only if the hotfix is installed and is not enabled -->
+    <Condition Message='!(loc.ErrorHotFix976477EnabledRequirement)'>Installed OR NOT WORD2007INSTALLED OR (WORD2007INSTALLED AND (NOT HOTFIX976477 OR HOTFIX976477ENABLED))</Condition>
+
+    <Property Id='ALLUSERS' Value='1' />
+    <Property Id='ARPCOMMENTS' Value='!(loc.Name)'/>
+    <Property Id="WIXUI_EXITDIALOGOPTIONALTEXT" Value="!(loc.ExitDialogOptionalText)" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="$(var.ProgramFilesFolder)">
+        <Directory Id="INSTALLLOCATION" Name="Team Foundation Server Word Add-in">
+          <Component Id="UnityDllComponent" Guid="33902D26-7A9E-4114-88B2-B704D5CD7CC5">
+            <File
+              Id="UnityDllFile"
+              Name="Microsoft.Practices.Unity.dll"
+              Source="$(var.WordAddInBinaryPath)"
+              KeyPath='yes'
+              Assembly='no'
+              ReadOnly='yes'
+              Vital='yes'
+              Checksum='yes'
+              DiskId="1" />
+          </Component>
+          <Component Id="ServiceLocationDllComponent" Guid="0344EF92-AFCF-4CA5-A0FA-F8411E1B28A2">
+            <File
+              Id="ServiceLocationDllFile"
+              Name="Microsoft.Practices.ServiceLocation.dll"
+              Source="$(var.WordAddInBinaryPath)"
+              KeyPath='yes'
+              Assembly='no'
+              ReadOnly='yes'
+              Vital='yes'
+              Checksum='yes'
+              DiskId="1" />
+          </Component>
+          <!-- Note that the following file is added because that is how the following article does this: http://msdn.microsoft.com/en-us/vsto/ff937654.aspx. This is also confirmed by the
+               following: http://blogs.msdn.com/b/vsto/archive/2010/05/05/deploying-the-utilities-assemblies-by-using-windows-installer.aspx -->
+          <Component Id="VstoUtilitiesDllComponent" Guid="5B848C5D-0492-40AE-AB1C-BAE5D3E8242C">
+            <File
+              Id="VstoUtilitiesDllFile"
+              Name="Microsoft.Office.Tools.Common.v4.0.Utilities.dll"
+              Source="$(var.WordAddInBinaryPath)"
+              KeyPath='yes'
+              Assembly='no'
+              ReadOnly='yes'
+              Vital='yes'
+              Checksum='yes'
+              DiskId="1" />
+          </Component>
+          <Component Id="LibraryDllComponent" Guid="57675365-6606-4D80-97FD-066A838F4EAA">
+            <File
+              Id="LibraryDllFile"
+              Name="$(var.Library.TargetFileName)"
+              Source="$(var.LibraryBinaryPath)"
+              KeyPath='yes'
+              Assembly='no'
+              ReadOnly='yes'
+              Vital='yes'
+              Checksum='yes'
+              DiskId="1" />
+          </Component>
+          <Component Id="AddInDllComponent" Guid="62327D5F-ECFD-46BD-948C-64661DF7E9DB">
+            <File
+              Id="AddInDllFile"
+              Name="$(var.WordAddIn.TargetName).dll"
+              Source="$(var.WordAddInBinaryPath)"
+              KeyPath='yes'
+              Assembly='no'
+              ReadOnly='yes'
+              Vital='yes'
+              Checksum='yes'
+              DiskId="1" />
+          </Component>
+          <Component Id="AddInVstoComponent" Guid="107F227E-5EC0-4746-BAAE-0A6D3DE7F1B7">
+            <File
+              Id="AddInVstoFile"
+              Name="$(var.WordAddIn.TargetName).vsto"
+              Source="$(var.WordAddInBinaryPath)"
+              KeyPath='yes'
+              Assembly='no'
+              ReadOnly='yes'
+              Vital='yes'
+              Checksum='yes'
+              DiskId="1" />
+            <RegistryKey Root="HKLM"
+                         Key="SOFTWARE\Wow6432Node\Microsoft\Office\Word\Addins\Microsoft.Word4Tfs.WordAddIn">
+              <RegistryValue Type="string" Name="Description" Value="!(loc.Description)"/>
+              <RegistryValue Type="string" Name="FriendlyName" Value="!(loc.Name)"/>
+              <RegistryValue Type="integer" Name="LoadBehavior" Value="3"/>
+              <RegistryValue Type="string" Name="Manifest" Value="[#AddInVstoFile]|vstolocal"/>
+            </RegistryKey>
+            <RegistryKey Root="HKLM"
+                         Key="SOFTWARE\Microsoft\Office\Word\Addins\Microsoft.Word4Tfs.WordAddIn">
+              <RegistryValue Type="string" Name="Description" Value="!(loc.Description)"/>
+              <RegistryValue Type="string" Name="FriendlyName" Value="!(loc.Name)"/>
+              <RegistryValue Type="integer" Name="LoadBehavior" Value="3"/>
+              <RegistryValue Type="string" Name="Manifest" Value="[#AddInVstoFile]|vstolocal"/>
+            </RegistryKey>
+          </Component>
+          <Component Id="AddInManifestComponent" Guid="43DCA474-9137-4484-8908-88C975C6654C">
+            <File
+              Id="AddInManifestFile"
+              Name="$(var.WordAddIn.TargetName).dll.manifest"
+              Source="$(var.WordAddInBinaryPath)"
+              KeyPath='yes'
+              Assembly='no'
+              ReadOnly='yes'
+              Vital='yes'
+              Checksum='yes'
+              DiskId="1" />
+          </Component>
+          <Component Id='SystemTemplateComponent' Guid="8C1F5129-8D52-4D53-80D1-E347E7CE3073">
+            <File
+              Id='SystemTemplateFile'
+              Name="Word4TFSSystemTemplate.dotx"
+              Source="$(var.SolutionDir)\Templates\"
+              KeyPath='yes'
+              Assembly='no'
+              ReadOnly='yes'
+              Vital='yes'
+              Checksum='yes'
+              DiskId="1" />
+          </Component>
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <InstallExecuteSequence>
+      <RemoveExistingProducts After="InstallInitialize" />
+    </InstallExecuteSequence>
+
+    <Feature Id="AddInFeature" Title="Word Add-in" Level="1">
+      <ComponentRef Id="UnityDllComponent" />
+      <ComponentRef Id="ServiceLocationDllComponent" />
+      <ComponentRef Id="VstoUtilitiesDllComponent" />
+      <ComponentRef Id="LibraryDllComponent" />
+      <ComponentRef Id="AddInDllComponent" />
+      <ComponentRef Id="AddInVstoComponent" />
+      <ComponentRef Id="AddInManifestComponent" />
+      <ComponentRef Id="SystemTemplateComponent"/>
+    </Feature>
+  </Product>
+</Wix>

@@ -1,0 +1,1614 @@
+<?xml version="1.0"?>
+<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="bb7b7e11-d1d7-4c8e-9fc5-1df572430d9d" AssemblyVersion="10.0.30319.1" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
+  <Configuration>
+    <Group Name="IE">
+      <Setting Name="Version" Value="9.0.8112.16421" WarningLevel="1" />
+      <Setting Name="InformationBar" WarningLevel="1" />
+      <Setting Name="AutoCompletePassword" Value="no" WarningLevel="1" />
+      <Setting Name="AutoCompleteForm" Value="no" WarningLevel="1" />
+      <Setting Name="DefaultBrowser" Value="IEXPLORE.EXE" WarningLevel="1" />
+      <Setting Name="PopupBlocker" Value="yes" WarningLevel="1" />
+      <Setting Name="TabbedBrowsing" Value="1" WarningLevel="2" />
+      <Setting Name="InternetZoneSecurity" Value="66816" WarningLevel="2" />
+      <Setting Name="IntranetZoneSecurity" Value="69632" WarningLevel="2" />
+      <Setting Name="TrustedZoneSecurity" Value="70912" WarningLevel="2" />
+      <Setting Name="RestrictedZoneSecurity" Value="73728" WarningLevel="2" />
+      <Setting Name="PhishingFilter" WarningLevel="1" />
+      <Setting Name="EnhancedSecurityConfiguration" WarningLevel="1" />
+    </Group>
+    <Group Name="OS">
+      <Setting Name="Name" Value="Microsoft Windows 7 Ultimate " WarningLevel="2" />
+      <Setting Name="Version" Value="Microsoft Windows NT 6.1.7600.0" WarningLevel="2" />
+      <Setting Name="IsUserAdmin" Value="False" WarningLevel="2" />
+      <Setting Name="Is64BitOperatingSystem" Value="True" WarningLevel="2" />
+      <Setting Name="IsTerminalServerSession" Value="False" WarningLevel="2" />
+      <Setting Name="OSLanguage" Value="1033" WarningLevel="1" />
+      <Setting Name="UserLocale" Value="1033" WarningLevel="1" />
+      <Setting Name="DragFullWindows" Value="True" WarningLevel="2" />
+      <Setting Name="ScreenResolutionWidth" Value="2048" WarningLevel="2" />
+      <Setting Name="ScreenResolutionHeight" Value="1152" WarningLevel="2" />
+      <Setting Name="SystemDPIX" Value="96" WarningLevel="2" />
+      <Setting Name="SystemDPIY" Value="96" WarningLevel="2" />
+      <Setting Name="Aero" Value="1" WarningLevel="1" />
+      <Setting Name="UACEnabled" Value="1" WarningLevel="2" />
+      <Setting Name="UACPromptEnabled" Value="0" WarningLevel="1" />
+      <Setting Name="WindowsAccessibilityAPIVersion" Value="3.0" WarningLevel="1" />
+    </Group>
+    <Group Name="TechnologyManagers">
+      <Setting Name="Web" WarningLevel="1" />
+      <Setting Name="UIA" WarningLevel="1" />
+      <Setting Name="Word" WarningLevel="1" />
+    </Group>
+  </Configuration>
+  <InitializeActions />
+  <ExecuteActions>
+    <LaunchApplicationAction>
+      <ParameterName />
+      <FileName>C:\Program Files (x86)\Microsoft Office\Office14\WINWORD.EXE</FileName>
+      <AlternateFileName>%ProgramFiles%\Microsoft Office\Office14\WINWORD.EXE</AlternateFileName>
+    </LaunchApplicationAction>
+    <MouseAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIItemWindow.UIRibbonPropertyPage.UIItemTitleBar">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="517" Y="16" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">Please record this and play it back!</Text>
+    </SendKeysAction>
+    <TestStepMarkerAction MarkerInformation="PlayKeyboardBack">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIItemWindow.UIRibbonPropertyPage.UIItemTitleBar">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="547" Y="21" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Left}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Left}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Left}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Left}</Text>
+    </SendKeysAction>
+    <TestStepMarkerAction MarkerInformation="HighlightKeyboardPlayback">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIItemWindow.UIRibbonPropertyPage.UIItemTitleBar">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="422" Y="13" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document.UIDocument12335Document">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="26" Y="9" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Right}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Right}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Left}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Left}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Left}</Text>
+    </SendKeysAction>
+    <TestStepMarkerAction MarkerInformation="PlayMouseClickBack">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <AssertAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document.UIDocument12335Document">
+      <ParameterName />
+      <PropertyName>Text</PropertyName>
+      <ExpectedValue>play it back</ExpectedValue>
+      <Type>String</Type>
+      <PropertyCondition>AreEqual</PropertyCondition>
+    </AssertAction>
+    <TestStepMarkerAction MarkerInformation="TestSelectionAssertion">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+    <LaunchApplicationAction>
+      <ParameterName />
+      <FileName>C:\Program Files (x86)\Microsoft Office\Office14\WINWORD.EXE</FileName>
+      <AlternateFileName>%ProgramFiles(x86)%\Microsoft Office\Office14\WINWORD.EXE</AlternateFileName>
+    </LaunchApplicationAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">Test</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false"> wor{Back}{Back}{Back}Word Add-in on selected Word Content{Back}{Back}{Back}{Back}{Back}{Back}{Back}content</Text>
+    </SendKeysAction>
+    <TestStepMarkerAction MarkerInformation="RecordedMethod1">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIItemWindow.UIRibbonPropertyPage.UIItemTitleBar">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="392" Y="12" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document.UIDocument12335Document">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="-76" Y="8" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <TestStepMarkerAction MarkerInformation="MseClickNotOnSelect">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <MouseAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIItemWindow.UIRibbonPropertyPage.UIItemTitleBar">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="475" Y="20" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{End}{Enter}Type in more text</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Left}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Left}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Left}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Left}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">C</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{End}{Enter}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">V</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">V</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Home}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{End}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Home}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Right}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Right}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Right}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Right}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Right}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Right}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Right}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Control Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Right}</Text>
+    </SendKeysAction>
+    <SendKeysAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document">
+      <ParameterName />
+      <ModifierKeys>Shift</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Text Encoded="false">{Left}</Text>
+    </SendKeysAction>
+    <TestStepMarkerAction MarkerInformation="LotsOfKeyboardClicksControls">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Action</MarkerRegionType>
+    </TestStepMarkerAction>
+    <AssertAction UIObjectName="UIMap.UIDocument1MicrosoftWoWindow.UIMicrosoftWordDocumenWindow.UIDocument1Document.UIDocument1036Document">
+      <ParameterName />
+      <PropertyName>StartIndex</PropertyName>
+      <ExpectedValue>0</ExpectedValue>
+      <Type>Int32</Type>
+      <PropertyCondition>AreEqual</PropertyCondition>
+    </AssertAction>
+    <TestStepMarkerAction MarkerInformation="Assert1stLine">
+      <ParameterName />
+      <StepId>-1</StepId>
+      <Direction>Start</Direction>
+      <Outcome />
+      <Disabled>false</Disabled>
+      <WorkItemId>0</WorkItemId>
+      <MarkerRegionType>Assertion</MarkerRegionType>
+    </TestStepMarkerAction>
+  </ExecuteActions>
+  <CleanupActions />
+  <OnErrorActions />
+  <Maps>
+    <UIMap Id="UIMap">
+      <TopLevelWindows>
+        <TopLevelWindow ControlType="Window" Id="UIDocument1MicrosoftWoWindow" FriendlyName="Document1 - Microsoft Word" SpecialControlType="None" SessionId="788374">
+          <TechnologyName>MSAA</TechnologyName>
+          <WindowTitles>
+            <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+          </WindowTitles>
+          <SearchConfigurations>
+            <SearchConfiguration>VisibleOnly</SearchConfiguration>
+          </SearchConfigurations>
+          <AndCondition Id="SearchCondition">
+            <PropertyCondition Name="Name">Document1 - Microsoft Word</PropertyCondition>
+            <PropertyCondition Name="ClassName">OpusApp</PropertyCondition>
+            <PropertyCondition Name="ControlType">Window</PropertyCondition>
+          </AndCondition>
+          <SupportLevel>0</SupportLevel>
+          <Descendants>
+            <UIObject ControlType="Window" Id="UIMicrosoftWordDocumenWindow" FriendlyName="Microsoft Word Document" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="Name">Microsoft Word Document</PropertyCondition>
+                <PropertyCondition Name="ClassName">_WwG</PropertyCondition>
+                <PropertyCondition Name="ControlType">Window</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Document" Id="UIDocument1Document" FriendlyName="Document1" SpecialControlType="None">
+                  <TechnologyName>Word</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                  </WindowTitles>
+                  <AndCondition>
+                    <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                    <PropertyCondition Name="Name">Document1</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants>
+                    <UIObject ControlType="Document" Id="UIDocument1016Document" FriendlyName="Document1[0, 16]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">16</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1023Document" FriendlyName="Document1[0, 23]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">23</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1030Document" FriendlyName="Document1[0, 30]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">30</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument101Document" FriendlyName="Document1[0, 1]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">1</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument102Document" FriendlyName="Document1[0, 2]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">2</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument103Document" FriendlyName="Document1[0, 3]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">3</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument104Document" FriendlyName="Document1[0, 4]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">4</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument105Document" FriendlyName="Document1[0, 5]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">5</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument106Document" FriendlyName="Document1[0, 6]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">6</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument107Document" FriendlyName="Document1[0, 7]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">7</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument108Document" FriendlyName="Document1[0, 8]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">8</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument109Document" FriendlyName="Document1[0, 9]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">9</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1010Document" FriendlyName="Document1[0, 10]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">10</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1011Document" FriendlyName="Document1[0, 11]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">11</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1012Document" FriendlyName="Document1[0, 12]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">12</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1013Document" FriendlyName="Document1[0, 13]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">13</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1014Document" FriendlyName="Document1[0, 14]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">14</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1015Document" FriendlyName="Document1[0, 15]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">15</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1017Document" FriendlyName="Document1[0, 17]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">17</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1018Document" FriendlyName="Document1[0, 18]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">18</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1019Document" FriendlyName="Document1[0, 19]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">19</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1020Document" FriendlyName="Document1[0, 20]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">20</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1021Document" FriendlyName="Document1[0, 21]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">21</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1022Document" FriendlyName="Document1[0, 22]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">22</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1024Document" FriendlyName="Document1[0, 24]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">24</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1025Document" FriendlyName="Document1[0, 25]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">25</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1026Document" FriendlyName="Document1[0, 26]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">26</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1027Document" FriendlyName="Document1[0, 27]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">27</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1028Document" FriendlyName="Document1[0, 28]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">28</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1029Document" FriendlyName="Document1[0, 29]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">29</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1031Document" FriendlyName="Document1[0, 31]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">31</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1032Document" FriendlyName="Document1[0, 32]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">32</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1033Document" FriendlyName="Document1[0, 33]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">33</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1034Document" FriendlyName="Document1[0, 34]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">34</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1035Document" FriendlyName="Document1[0, 35]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">35</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1036Document" FriendlyName="Document1[0, 36]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">36</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument1037Document" FriendlyName="Document1[0, 37]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">0</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">37</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument12335Document" FriendlyName="Document1[23, 35]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">23</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">35</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument13636Document" FriendlyName="Document1[36, 36]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">36</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">36</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument13535Document" FriendlyName="Document1[35, 35]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">35</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">35</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument13135Document" FriendlyName="Document1[31, 35]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">31</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">35</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument12835Document" FriendlyName="Document1[28, 35]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">28</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">35</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument12929Document" FriendlyName="Document1[29, 29]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">29</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">29</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Document" Id="UIDocument13131Document" FriendlyName="Document1[31, 31]" SpecialControlType="None">
+                      <TechnologyName>Word</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <AndCondition>
+                        <PropertyCondition Name="ControlType">Document</PropertyCondition>
+                        <PropertyCondition Name="StartIndex">31</PropertyCondition>
+                        <PropertyCondition Name="EndIndex">31</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                  </Descendants>
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Window" Id="UIItemWindow" FriendlyName="" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="AccessibleName">Ribbon</PropertyCondition>
+                <PropertyCondition Name="ClassName">NetUIHWND</PropertyCondition>
+                <PropertyCondition Name="ControlType">Window</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="PropertyPage" Id="UIRibbonPropertyPage" FriendlyName="Ribbon" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="Name">Ribbon</PropertyCondition>
+                    <PropertyCondition Name="ControlType">PropertyPage</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants>
+                    <UIObject ControlType="TitleBar" Id="UIItemTitleBar" FriendlyName="" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="ControlType">TitleBar</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="Button" Id="UIFileTabButton" FriendlyName="File Tab" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">File Tab</PropertyCondition>
+                        <PropertyCondition Name="ControlType">Button</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                  </Descendants>
+                </UIObject>
+                <UIObject ControlType="Client" Id="UIRibbonClient" FriendlyName="Ribbon" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="ControlType">Client</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants>
+                    <UIObject ControlType="PropertyPage" Id="UIHomePropertyPage" FriendlyName="Home" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">Home</PropertyCondition>
+                        <PropertyCondition Name="ControlType">PropertyPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="TabPage" Id="UIInsertTabPage" FriendlyName="Insert" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">Insert</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="TabPage" Id="UIPageLayoutTabPage" FriendlyName="Page Layout" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">Page Layout</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="TabPage" Id="UIReferencesTabPage" FriendlyName="References" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">References</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="TabPage" Id="UIMailingsTabPage" FriendlyName="Mailings" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">Mailings</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="TabPage" Id="UIReviewTabPage" FriendlyName="Review" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">Review</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="TabPage" Id="UIViewTabPage" FriendlyName="View" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">View</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="TabPage" Id="UITeamTabPage" FriendlyName="Team" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">Team</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                  </Descendants>
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Client" Id="UIDocument1Client" FriendlyName="Document1" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="Name">Document1</PropertyCondition>
+                <PropertyCondition Name="ControlType">Client</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Client" Id="UIMicrosoftWordDocumenClient" FriendlyName="Microsoft Word Document" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="Name">Microsoft Word Document</PropertyCondition>
+                    <PropertyCondition Name="ControlType">Client</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="MenuBar" Id="UIFileMenuBar" FriendlyName="File" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="Name">File</PropertyCondition>
+                <PropertyCondition Name="ControlType">MenuBar</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="MenuItem" Id="UISaveMenuItem" FriendlyName="Save" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>Expand</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="Name">Save</PropertyCondition>
+                    <PropertyCondition Name="ControlType">MenuItem</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="MenuBar" Id="UIFileMenuBar1" FriendlyName="File" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="Name">File</PropertyCondition>
+                <PropertyCondition Name="ControlType">MenuBar</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="TabPage" Id="UINewTabPage" FriendlyName="New" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="Name">New</PropertyCondition>
+                    <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Client" Id="UIAvailableTemplatesClient" FriendlyName="Available Templates" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="ControlType">Client</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="ListItem" Id="UIBlankdocumentListItem" FriendlyName="Blank document" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                  </WindowTitles>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="Name">Blank document</PropertyCondition>
+                    <PropertyCondition Name="ControlType">ListItem</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+            <UIObject ControlType="Group" Id="UITemplatePreviewInforGroup" FriendlyName="Template Preview Information" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="Name">Template Preview Information</PropertyCondition>
+                <PropertyCondition Name="ControlType">Group</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Button" Id="UICreateButton" FriendlyName="Create" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Document1 - Microsoft Word</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="Name">Create</PropertyCondition>
+                    <PropertyCondition Name="ControlType">Button</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+          </Descendants>
+        </TopLevelWindow>
+        <TopLevelWindow ControlType="Window" Id="UISaveAsWindow" FriendlyName="Save As" SpecialControlType="None" SessionId="590770">
+          <TechnologyName>MSAA</TechnologyName>
+          <WindowTitles>
+            <WindowTitle>Save As</WindowTitle>
+          </WindowTitles>
+          <SearchConfigurations>
+            <SearchConfiguration>VisibleOnly</SearchConfiguration>
+          </SearchConfigurations>
+          <AndCondition Id="SearchCondition">
+            <PropertyCondition Name="Name">Save As</PropertyCondition>
+            <PropertyCondition Name="ClassName">#32770</PropertyCondition>
+            <PropertyCondition Name="ControlType">Window</PropertyCondition>
+          </AndCondition>
+          <SupportLevel>0</SupportLevel>
+          <Descendants>
+            <UIObject ControlType="Window" Id="UICancelWindow" FriendlyName="Cancel" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Save As</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="ControlId">2</PropertyCondition>
+                <PropertyCondition Name="ControlType">Window</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Button" Id="UICancelButton" FriendlyName="Cancel" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Save As</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="Name">Cancel</PropertyCondition>
+                    <PropertyCondition Name="ControlType">Button</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
+          </Descendants>
+        </TopLevelWindow>
+        <TopLevelWindow ControlType="Window" Id="UIDocument2MicrosoftWoWindow" FriendlyName="Document2 - Microsoft Word" SpecialControlType="None" SessionId="721858">
+          <TechnologyName>MSAA</TechnologyName>
+          <WindowTitles>
+            <WindowTitle>Document2 - Microsoft Word</WindowTitle>
+          </WindowTitles>
+          <SearchConfigurations>
+            <SearchConfiguration>VisibleOnly</SearchConfiguration>
+          </SearchConfigurations>
+          <AndCondition Id="SearchCondition">
+            <PropertyCondition Name="Name">Document2 - Microsoft Word</PropertyCondition>
+            <PropertyCondition Name="ClassName">OpusApp</PropertyCondition>
+            <PropertyCondition Name="ControlType">Window</PropertyCondition>
+          </AndCondition>
+          <SupportLevel>0</SupportLevel>
+          <Descendants>
+            <UIObject ControlType="Window" Id="UIItemWindow" FriendlyName="" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Document2 - Microsoft Word</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="AccessibleName">Ribbon</PropertyCondition>
+                <PropertyCondition Name="ClassName">NetUIHWND</PropertyCondition>
+                <PropertyCondition Name="ControlType">Window</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Client" Id="UIRibbonClient" FriendlyName="Ribbon" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Document2 - Microsoft Word</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="ControlType">Client</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants>
+                    <UIObject ControlType="TabPage" Id="UIInsertTabPage" FriendlyName="Insert" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document2 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">Insert</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="TabPage" Id="UIPageLayoutTabPage" FriendlyName="Page Layout" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document2 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">Page Layout</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="TabPage" Id="UIReferencesTabPage" FriendlyName="References" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document2 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">References</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="TabPage" Id="UIMailingsTabPage" FriendlyName="Mailings" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document2 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">Mailings</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="TabPage" Id="UIReviewTabPage" FriendlyName="Review" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document2 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">Review</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="TabPage" Id="UIViewTabPage" FriendlyName="View" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document2 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">View</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                    <UIObject ControlType="TabPage" Id="UITeamTabPage" FriendlyName="Team" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document2 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">Team</PropertyCondition>
+                        <PropertyCondition Name="ControlType">TabPage</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                  </Descendants>
+                </UIObject>
+                <UIObject ControlType="PropertyPage" Id="UIRibbonPropertyPage" FriendlyName="Ribbon" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Document2 - Microsoft Word</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="Name">Ribbon</PropertyCondition>
+                    <PropertyCondition Name="ControlType">PropertyPage</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants>
+                    <UIObject ControlType="Button" Id="UICloseButton" FriendlyName="Close" SpecialControlType="None">
+                      <TechnologyName>MSAA</TechnologyName>
+                      <WindowTitles>
+                        <WindowTitle>Document2 - Microsoft Word</WindowTitle>
+                      </WindowTitles>
+                      <SearchConfigurations>
+                        <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                      </SearchConfigurations>
+                      <AndCondition Id="SearchCondition">
+                        <PropertyCondition Name="Name">Close</PropertyCondition>
+                        <PropertyCondition Name="ControlType">Button</PropertyCondition>
+                      </AndCondition>
+                      <SupportLevel>0</SupportLevel>
+                      <Descendants />
+                    </UIObject>
+                  </Descendants>
+                </UIObject>
+              </Descendants>
+            </UIObject>
+          </Descendants>
+        </TopLevelWindow>
+      </TopLevelWindows>
+    </UIMap>
+  </Maps>
+  <ValueMap>
+    <ParameterList />
+  </ValueMap>
+</UITest>

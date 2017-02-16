@@ -1,0 +1,33 @@
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2010-05-26T16:14:42.0144555Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="9208" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT001</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2010-05-26T17:14:42.0134555+01:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header>
+              <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://contoso.com/service/test/IArithmetic/RefObjectParameter</Action>
+            </s:Header>
+            <s:Body>
+              <RefObjectParameter xmlns="http://contoso.com/service/test">
+                <a xmlns:d4p1="http://www.w3.org/2001/XMLSchema" i:type="d4p1:string" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">hello</a>
+                <b i:nil="true" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"></b>
+              </RefObjectParameter>
+            </s:Body>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>

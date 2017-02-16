@@ -1,0 +1,16 @@
+﻿<?xml version='1.0' encoding='utf-8' ?>
+<WcfUnitConfiguration xmlns='http://microsoft.com/wcfunit'
+                      testMethodMode='ScenarioMethodOnly'
+                      operationTimerMode='IncludeOperationTimers'
+                      clientTrace='true'
+                      serviceTrace='false'>
+  <assembly fileName="C:\Users\rjarratt\Documents\Projects\VSTS\Source\SampleClientAndService\Contracts\bin\Debug\Contracts.dll"/>
+  <assembly fileName="C:\Users\rjarratt\Documents\Projects\VSTS\Source\SampleClientAndService\Client\bin\Debug\Contracts.Custom.dll"/>
+  <soapActions soapActionMode='Include'>
+    <soapAction action="http://contoso.com/service/test/IArithmetic/Add"/>
+    <soapAction action="http://contoso.com/service/test/IArithmetic/Add2"/>
+    <soapAction action="http://contoso.com/service/test/IArithmetic/Add3"/>
+  </soapActions>
+  <parser assembly="Microsoft.WcfUnit.Library, Version=4.0.0.0, Culture=neutral, PublicKeyToken=33a5eb443961c4bf"
+          type="Microsoft.WcfUnit.Library.FiddlerTextParser"/>
+</WcfUnitConfiguration>

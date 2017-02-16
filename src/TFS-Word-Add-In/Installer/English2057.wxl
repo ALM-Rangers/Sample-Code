@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+//*********************************************************
+//
+//    Copyright (c) Microsoft. All rights reserved.
+//    This code is licensed under the MIT License.
+//    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF 
+//    ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+//    TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+//    PARTICULAR PURPOSE AND NONINFRINGEMENT.
+//
+//*********************************************************
+-->
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  <String Id='Name'>Team Foundation Server 2013 Word Add-in</String>
+  <String Id='Language'>2057</String>
+  <String Id='PackageLanguage'>0,1033,2057</String>
+  <String Id='Description'>A Word Add-in for Team Foundation Server 2012 that allows work items to be viewed in a Word document.</String>
+  <String Id='Comments'>Requires administrative privileges to install. Dependencies are: .NET Framework 4.5.1, Word 2007 or Word 2010 (32 or 64 bit) and Team Explorer 2013</String>
+  <String Id='Keywords'>Installer, Team Foundation Server, Microsoft Word</String>
+
+  <String Id='ErrorFXRequirement'>Requires Microsoft .NET Framework 4.5.1 Client Profile</String>
+  <String Id='ErrorVSTORequirement'>Requires Visual Studio 2010 Tools for Office Runtime</String>
+  <String Id='ErrorTERequirement'>Requires Microsoft Team Foundation Server 2013 Object Model (Installed by Team Explorer 2013)</String>
+  <String Id='ErrorWordRequirement'>Requires Word 2007 SP1 or later, or Word 2010, or Word 2013</String>
+  <String Id='ErrorHotFix976477Requirement'>Requires HotFix 976477</String>
+  <String Id='ErrorHotFix976477EnabledRequirement'>HotFix 976477 is installed but must also be enabled</String>
+  <String Id='ErrorNoDowngrade'>A later version of [ProductName] is already installed.</String>
+  <String Id='ExitDialogOptionalText'>Please note: When you first run the Team Foundation Server Add-in it will automatically enable the Show Bookmarks setting, because bookmarks are used by the Add-in to mark where each Work Item is located in the document, and it is important that you do not unintentionally delete the bookmarks. You can disable this setting from the Team ribbon if you wish.</String>
+</WixLocalization>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <?include ".\ProductVersion.wxi" ?>
+
+  <?if $(var.Platform) = "x86"?>
+    <?define ProductName = "Coded UI Word 2010 Add-in" ?>
+    <?define UpgradeCode = "{D5E2BB59-678F-4CF6-9F9A-23560A569160}" ?>
+  <?elseif $(var.Platform) = "x64"?>
+    <?define ProductName = "Coded UI Word 2010 Add-in (x64)" ?>
+    <?define UpgradeCode = "{36D09349-77D3-4297-96F4-47E3FE5A0729}" ?>
+  <?endif?>
+
+  <?define Manufacturer = "Microsoft Visual Studio ALM Rangers" ?>
+</Include>

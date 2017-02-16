@@ -1,0 +1,33 @@
+﻿<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2008-04-15T19:04:36.2740000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="7628" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT001</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2008-04-15T20:04:36.2740000+01:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Channels.BodyWriterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header>
+              <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://contoso.com/service/test/IArithmetic/MixedDirectionParameters</Action>
+            </s:Header>
+            <s:Body>
+              <MixedDirectionParameters xmlns="http://contoso.com/service/test">
+                <a>1</a>
+                <b>23</b>
+              </MixedDirectionParameters>
+            </s:Body>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>

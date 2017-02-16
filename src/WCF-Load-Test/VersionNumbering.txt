@@ -1,0 +1,11 @@
+How to update the version number. There is no automatic version number updating in the build.
+
+1. Edit CommonAssemblyInfo.cs file, edit AssemblyVersion and AssemblyFileVersion.
+2. Edit InstallerEn.wxs, change the Version attribute of the Product element.
+3. Edit WCFTestGenerator2010.vstemplate and update the reference to the VSIntegration assembly.
+4. Edit TestHelper which has a string referencing the Library assembly.
+5. Change the UTILGetVersion test to check for the correct version.
+
+Version numbering for files
+
+Major.Minor.YY.MMDD

@@ -1,0 +1,331 @@
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/ProcessSimpleAsmxRequestWrapped"
+Host: 127.0.0.1:8082
+Content-Length: 383
+Expect: 100-continue
+Connection: Keep-Alive
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessSimpleAsmxRequestWrapped xmlns="http://contoso.com/asmxservice/test"><r A="99"><B>hello</B></r></ProcessSimpleAsmxRequestWrapped></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 459
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessSimpleAsmxRequestWrappedResponse xmlns="http://contoso.com/asmxservice/test"><ProcessSimpleAsmxRequestWrappedResult>hello99</ProcessSimpleAsmxRequestWrappedResult></ProcessSimpleAsmxRequestWrappedResponse></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/ProcessSimpleAsmxRequestBare"
+Host: 127.0.0.1:8082
+Content-Length: 316
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><r A="99" xmlns="http://contoso.com/asmxservice/test"><B>hello</B></r></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 370
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessSimpleAsmxRequestBareResult xmlns="http://contoso.com/asmxservice/test">hello99</ProcessSimpleAsmxRequestBareResult></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/ProcessMultipleParametersWrapped"
+Host: 127.0.0.1:8082
+Content-Length: 380
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessMultipleParametersWrapped xmlns="http://contoso.com/asmxservice/test"><a>99</a><b>hello</b></ProcessMultipleParametersWrapped></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 463
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessMultipleParametersWrappedResponse xmlns="http://contoso.com/asmxservice/test"><ProcessMultipleParametersWrappedResult>hello99</ProcessMultipleParametersWrappedResult></ProcessMultipleParametersWrappedResponse></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/WithNullableInt"
+Host: 127.0.0.1:8082
+Content-Length: 345
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><WithNullableInt xmlns="http://contoso.com/asmxservice/test"><r xsi:nil="true" /></WithNullableInt></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 366
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><WithNullableIntResponse xmlns="http://contoso.com/asmxservice/test"><WithNullableIntResult /></WithNullableIntResponse></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/WithNullableInt"
+Host: 127.0.0.1:8082
+Content-Length: 333
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><WithNullableInt xmlns="http://contoso.com/asmxservice/test"><r>1</r></WithNullableInt></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 389
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><WithNullableIntResponse xmlns="http://contoso.com/asmxservice/test"><WithNullableIntResult>1</WithNullableIntResult></WithNullableIntResponse></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/SimpleTypes"
+Host: 127.0.0.1:8082
+Content-Length: 505
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><SimpleTypes xmlns="http://contoso.com/asmxservice/test"><i>1</i><e>Black</e><s>a</s><d>1.1</d><dt>2010-07-01T08:56:03.390149+01:00</dt><g>7098b473-acb5-495b-bce2-54a7bbd2b388</g><q1:xqn xmlns="" xmlns:q1="http://contoso.com/asmxservice/test" /></SimpleTypes></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 354
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><SimpleTypesResponse xmlns="http://contoso.com/asmxservice/test"><SimpleTypesResult /></SimpleTypesResponse></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/ScalarArray"
+Host: 127.0.0.1:8082
+Content-Length: 360
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ScalarArray xmlns="http://contoso.com/asmxservice/test"><a><int>0</int><int>1</int><int>2</int></a></ScalarArray></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 373
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ScalarArrayResponse xmlns="http://contoso.com/asmxservice/test"><ScalarArrayResult>3</ScalarArrayResult></ScalarArrayResponse></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/XmlRequestMethod"
+Host: 127.0.0.1:8082
+Content-Length: 523
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XmlRequestMethod xmlns="http://contoso.com/asmxservice/test"><request><Element><test xmlns="">Element</test></Element><Nodes><XmlNode><test xmlns=""><node>one</node></test></XmlNode><XmlNode><test xmlns=""><node>two</node></test></XmlNode></Nodes></request></XmlRequestMethod></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 318
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><XmlRequestMethodResponse xmlns="http://contoso.com/asmxservice/test" /></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/CollectionMethod"
+Host: 127.0.0.1:8082
+Content-Length: 781
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><CollectionMethod xmlns="http://contoso.com/asmxservice/test"><data><ArrayList><anyType xsi:type="xsd:int">1</anyType><anyType xsi:type="xsd:string">hello</anyType></ArrayList><IntList><int>0</int><int>1</int><int>2</int></IntList><RequestList><SimpleAsmxRequest A="0" /></RequestList><RequestCollection><SimpleAsmxRequest A="0" /></RequestCollection><NonGenericEnumerableOnlyCollection><anyType xsi:type="xsd:string">hello</anyType><anyType xsi:type="xsd:int">1</anyType></NonGenericEnumerableOnlyCollection></data></CollectionMethod></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 318
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><CollectionMethodResponse xmlns="http://contoso.com/asmxservice/test" /></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/ProcessShape"
+Host: 127.0.0.1:8082
+Content-Length: 392
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessShape xmlns="http://contoso.com/asmxservice/test"><shape xsi:type="AsmxCircle"><Colour>0</Colour><Radius>0</Radius></shape></ProcessShape></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 314
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessShapeResponse xmlns="http://contoso.com/asmxservice/test" /></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/ProcessDataSet"
+Host: 127.0.0.1:8082
+Content-Length: 2799
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessDataSet xmlns="http://contoso.com/asmxservice/test"><a><xs:schema id="test" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:app1="urn:table1" xmlns:app2="urn:table2"><xs:import namespace="urn:table2" /><xs:import namespace="urn:table1" /><xs:element name="test" msdata:IsDataSet="true" msdata:Locale=""><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element ref="app1:table1" /><xs:element ref="app2:table2" /></xs:choice></xs:complexType></xs:element></xs:schema><xs:schema targetNamespace="urn:table1" xmlns:mstns="urn:table1" xmlns="urn:table1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="urn:table1" xmlns:app2="urn:table2"><xs:import namespace="urn:table2" /><xs:element name="table1"><xs:complexType><xs:sequence><xs:element name="col1_1" type="xs:int" minOccurs="0" /><xs:element name="col1_2" type="xs:string" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:schema><xs:schema targetNamespace="urn:table2" xmlns:mstns="urn:table2" xmlns="urn:table2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app2="urn:table2" xmlns:app1="urn:table1"><xs:import namespace="urn:table1" /><xs:element name="table2"><xs:complexType><xs:sequence><xs:element name="col2_1" type="xs:boolean" minOccurs="0" /><xs:element name="col2_2" type="xs:decimal" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:schema><diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><test xmlns=""><table1 diffgr:id="table11" msdata:rowOrder="0" diffgr:hasChanges="inserted" xmlns="urn:table1"><col1_1>1</col1_1><col1_2>hello1</col1_2></table1><table1 diffgr:id="table12" msdata:rowOrder="1" diffgr:hasChanges="inserted" xmlns="urn:table1"><col1_1>2</col1_1><col1_2>hello2</col1_2></table1><table1 diffgr:id="table13" msdata:rowOrder="2" diffgr:hasChanges="inserted" xmlns="urn:table1" /><table2 diffgr:id="table21" msdata:rowOrder="0" diffgr:hasChanges="inserted" xmlns="urn:table2"><col2_1>true</col2_1><col2_2>1.0</col2_2></table2><table2 diffgr:id="table22" msdata:rowOrder="1" diffgr:hasChanges="inserted" xmlns="urn:table2"><col2_1>false</col2_1><col2_2>99.0</col2_2></table2></test></diffgr:diffgram></a></ProcessDataSet></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 2853
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessDataSetResponse xmlns="http://contoso.com/asmxservice/test"><ProcessDataSetResult><xs:schema id="test" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:app1="urn:table1" xmlns:app2="urn:table2"><xs:import namespace="urn:table1" /><xs:import namespace="urn:table2" /><xs:element name="test" msdata:IsDataSet="true" msdata:Locale=""><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element ref="app1:table1" /><xs:element ref="app2:table2" /></xs:choice></xs:complexType></xs:element></xs:schema><xs:schema targetNamespace="urn:table2" xmlns:mstns="urn:table2" xmlns="urn:table2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app2="urn:table2" xmlns:app1="urn:table1"><xs:import namespace="urn:table1" /><xs:element name="table2"><xs:complexType><xs:sequence><xs:element name="col2_1" type="xs:boolean" minOccurs="0" /><xs:element name="col2_2" type="xs:decimal" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:schema><xs:schema targetNamespace="urn:table1" xmlns:mstns="urn:table1" xmlns="urn:table1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="urn:table1" xmlns:app2="urn:table2"><xs:import namespace="urn:table2" /><xs:element name="table1"><xs:complexType><xs:sequence><xs:element name="col1_1" type="xs:int" minOccurs="0" /><xs:element name="col1_2" type="xs:string" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:schema><diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><test xmlns=""><table1 diffgr:id="table11" msdata:rowOrder="0" diffgr:hasChanges="inserted" xmlns="urn:table1"><col1_1>1</col1_1><col1_2>hello1</col1_2></table1><table1 diffgr:id="table12" msdata:rowOrder="1" diffgr:hasChanges="inserted" xmlns="urn:table1"><col1_1>2</col1_1><col1_2>hello2</col1_2></table1><table1 diffgr:id="table13" msdata:rowOrder="2" diffgr:hasChanges="inserted" xmlns="urn:table1" /><table2 diffgr:id="table21" msdata:rowOrder="0" diffgr:hasChanges="inserted" xmlns="urn:table2"><col2_1>true</col2_1><col2_2>1.0</col2_2></table2><table2 diffgr:id="table22" msdata:rowOrder="1" diffgr:hasChanges="inserted" xmlns="urn:table2"><col2_1>false</col2_1><col2_2>99.0</col2_2></table2></test></diffgr:diffgram></ProcessDataSetResult></ProcessDataSetResponse></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/ProcessDataSetWithMoreData"
+Host: 127.0.0.1:8082
+Content-Length: 2831
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessDataSetWithMoreData xmlns="http://contoso.com/asmxservice/test"><a><xs:schema id="test" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:app1="urn:table1" xmlns:app2="urn:table2"><xs:import namespace="urn:table2" /><xs:import namespace="urn:table1" /><xs:element name="test" msdata:IsDataSet="true" msdata:Locale=""><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element ref="app1:table1" /><xs:element ref="app2:table2" /></xs:choice></xs:complexType></xs:element></xs:schema><xs:schema targetNamespace="urn:table1" xmlns:mstns="urn:table1" xmlns="urn:table1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="urn:table1" xmlns:app2="urn:table2"><xs:import namespace="urn:table2" /><xs:element name="table1"><xs:complexType><xs:sequence><xs:element name="col1_1" type="xs:int" minOccurs="0" /><xs:element name="col1_2" type="xs:string" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:schema><xs:schema targetNamespace="urn:table2" xmlns:mstns="urn:table2" xmlns="urn:table2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app2="urn:table2" xmlns:app1="urn:table1"><xs:import namespace="urn:table1" /><xs:element name="table2"><xs:complexType><xs:sequence><xs:element name="col2_1" type="xs:boolean" minOccurs="0" /><xs:element name="col2_2" type="xs:decimal" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:schema><diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><test xmlns=""><table1 diffgr:id="table11" msdata:rowOrder="0" diffgr:hasChanges="inserted" xmlns="urn:table1"><col1_1>1</col1_1><col1_2>hello1</col1_2></table1><table1 diffgr:id="table12" msdata:rowOrder="1" diffgr:hasChanges="inserted" xmlns="urn:table1"><col1_1>2</col1_1><col1_2>hello2</col1_2></table1><table1 diffgr:id="table13" msdata:rowOrder="2" diffgr:hasChanges="inserted" xmlns="urn:table1" /><table2 diffgr:id="table21" msdata:rowOrder="0" diffgr:hasChanges="inserted" xmlns="urn:table2"><col2_1>true</col2_1><col2_2>1.0</col2_2></table2><table2 diffgr:id="table22" msdata:rowOrder="1" diffgr:hasChanges="inserted" xmlns="urn:table2"><col2_1>false</col2_1><col2_2>99.0</col2_2></table2></test></diffgr:diffgram></a><i>1</i></ProcessDataSetWithMoreData></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 2901
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessDataSetWithMoreDataResponse xmlns="http://contoso.com/asmxservice/test"><ProcessDataSetWithMoreDataResult><xs:schema id="test" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:app1="urn:table1" xmlns:app2="urn:table2"><xs:import namespace="urn:table1" /><xs:import namespace="urn:table2" /><xs:element name="test" msdata:IsDataSet="true" msdata:Locale=""><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element ref="app1:table1" /><xs:element ref="app2:table2" /></xs:choice></xs:complexType></xs:element></xs:schema><xs:schema targetNamespace="urn:table2" xmlns:mstns="urn:table2" xmlns="urn:table2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app2="urn:table2" xmlns:app1="urn:table1"><xs:import namespace="urn:table1" /><xs:element name="table2"><xs:complexType><xs:sequence><xs:element name="col2_1" type="xs:boolean" minOccurs="0" /><xs:element name="col2_2" type="xs:decimal" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:schema><xs:schema targetNamespace="urn:table1" xmlns:mstns="urn:table1" xmlns="urn:table1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="urn:table1" xmlns:app2="urn:table2"><xs:import namespace="urn:table2" /><xs:element name="table1"><xs:complexType><xs:sequence><xs:element name="col1_1" type="xs:int" minOccurs="0" /><xs:element name="col1_2" type="xs:string" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:schema><diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><test xmlns=""><table1 diffgr:id="table11" msdata:rowOrder="0" diffgr:hasChanges="inserted" xmlns="urn:table1"><col1_1>1</col1_1><col1_2>hello1</col1_2></table1><table1 diffgr:id="table12" msdata:rowOrder="1" diffgr:hasChanges="inserted" xmlns="urn:table1"><col1_1>2</col1_1><col1_2>hello2</col1_2></table1><table1 diffgr:id="table13" msdata:rowOrder="2" diffgr:hasChanges="inserted" xmlns="urn:table1" /><table2 diffgr:id="table21" msdata:rowOrder="0" diffgr:hasChanges="inserted" xmlns="urn:table2"><col2_1>true</col2_1><col2_2>1.0</col2_2></table2><table2 diffgr:id="table22" msdata:rowOrder="1" diffgr:hasChanges="inserted" xmlns="urn:table2"><col2_1>false</col2_1><col2_2>99.0</col2_2></table2></test></diffgr:diffgram></ProcessDataSetWithMoreDataResult></ProcessDataSetWithMoreDataResponse></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/ProcessCompoundDataSet"
+Host: 127.0.0.1:8082
+Content-Length: 2834
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessCompoundDataSet xmlns="http://contoso.com/asmxservice/test"><data><Data><xs:schema id="test" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:app1="urn:table1" xmlns:app2="urn:table2"><xs:import namespace="urn:table2" /><xs:import namespace="urn:table1" /><xs:element name="test" msdata:IsDataSet="true" msdata:Locale=""><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element ref="app1:table1" /><xs:element ref="app2:table2" /></xs:choice></xs:complexType></xs:element></xs:schema><xs:schema targetNamespace="urn:table1" xmlns:mstns="urn:table1" xmlns="urn:table1" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="urn:table1" xmlns:app2="urn:table2"><xs:import namespace="urn:table2" /><xs:element name="table1"><xs:complexType><xs:sequence><xs:element name="col1_1" type="xs:int" minOccurs="0" /><xs:element name="col1_2" type="xs:string" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:schema><xs:schema targetNamespace="urn:table2" xmlns:mstns="urn:table2" xmlns="urn:table2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app2="urn:table2" xmlns:app1="urn:table1"><xs:import namespace="urn:table1" /><xs:element name="table2"><xs:complexType><xs:sequence><xs:element name="col2_1" type="xs:boolean" minOccurs="0" /><xs:element name="col2_2" type="xs:decimal" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:schema><diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><test xmlns=""><table1 diffgr:id="table11" msdata:rowOrder="0" diffgr:hasChanges="inserted" xmlns="urn:table1"><col1_1>1</col1_1><col1_2>hello1</col1_2></table1><table1 diffgr:id="table12" msdata:rowOrder="1" diffgr:hasChanges="inserted" xmlns="urn:table1"><col1_1>2</col1_1><col1_2>hello2</col1_2></table1><table1 diffgr:id="table13" msdata:rowOrder="2" diffgr:hasChanges="inserted" xmlns="urn:table1" /><table2 diffgr:id="table21" msdata:rowOrder="0" diffgr:hasChanges="inserted" xmlns="urn:table2"><col2_1>true</col2_1><col2_2>1.0</col2_2></table2><table2 diffgr:id="table22" msdata:rowOrder="1" diffgr:hasChanges="inserted" xmlns="urn:table2"><col2_1>false</col2_1><col2_2>99.0</col2_2></table2></test></diffgr:diffgram></Data></data></ProcessCompoundDataSet></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 324
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessCompoundDataSetResponse xmlns="http://contoso.com/asmxservice/test" /></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/ProcessTypedDataSet"
+Host: 127.0.0.1:8082
+Content-Length: 1923
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessTypedDataSet xmlns="http://contoso.com/asmxservice/test"><data><xs:schema id="AsmxTypedDataSet" targetNamespace="http://tempuri.org/TypedDataSet.xsd" xmlns:mstns="http://tempuri.org/TypedDataSet.xsd" xmlns="http://tempuri.org/TypedDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified"><xs:element name="AsmxTypedDataSet" msdata:IsDataSet="true" msdata:Locale=""><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="DataTable1"><xs:complexType><xs:sequence><xs:element name="DataColumn1" type="xs:string" minOccurs="0" /><xs:element name="DataColumn2" type="xs:int" minOccurs="0" /><xs:element name="DataColumn3" type="xs:dateTime" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema><diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><AsmxTypedDataSet xmlns="http://tempuri.org/TypedDataSet.xsd"><DataTable1 diffgr:id="DataTable11" msdata:rowOrder="0" diffgr:hasChanges="inserted"><DataColumn1>hello1</DataColumn1><DataColumn2>1</DataColumn2><DataColumn3>2010-06-29T00:00:00+01:00</DataColumn3></DataTable1><DataTable1 diffgr:id="DataTable12" msdata:rowOrder="1" diffgr:hasChanges="inserted"><DataColumn1>hello2</DataColumn1><DataColumn2>2</DataColumn2><DataColumn3>2010-05-29T00:00:00+01:00</DataColumn3></DataTable1><DataTable1 diffgr:id="DataTable13" msdata:rowOrder="2" diffgr:hasChanges="inserted" /></AsmxTypedDataSet></diffgr:diffgram></data></ProcessTypedDataSet></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 321
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessTypedDataSetResponse xmlns="http://contoso.com/asmxservice/test" /></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+
+POST http://127.0.0.1:8082/TestAsmxService.asmx HTTP/1.1
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; MS Web Services Client Protocol 2.0.50727.4927)
+Content-Type: text/xml; charset=utf-8
+SOAPAction: "http://contoso.com/asmxservice/test/ProcessCompoundTypedDataSet"
+Host: 127.0.0.1:8082
+Content-Length: 1952
+Expect: 100-continue
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessCompoundTypedDataSet xmlns="http://contoso.com/asmxservice/test"><data><Data><xs:schema id="AsmxTypedDataSet" targetNamespace="http://tempuri.org/TypedDataSet.xsd" xmlns:mstns="http://tempuri.org/TypedDataSet.xsd" xmlns="http://tempuri.org/TypedDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified"><xs:element name="AsmxTypedDataSet" msdata:IsDataSet="true" msdata:Locale=""><xs:complexType><xs:choice minOccurs="0" maxOccurs="unbounded"><xs:element name="DataTable1"><xs:complexType><xs:sequence><xs:element name="DataColumn1" type="xs:string" minOccurs="0" /><xs:element name="DataColumn2" type="xs:int" minOccurs="0" /><xs:element name="DataColumn3" type="xs:dateTime" minOccurs="0" /></xs:sequence></xs:complexType></xs:element></xs:choice></xs:complexType></xs:element></xs:schema><diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1"><AsmxTypedDataSet xmlns="http://tempuri.org/TypedDataSet.xsd"><DataTable1 diffgr:id="DataTable11" msdata:rowOrder="0" diffgr:hasChanges="inserted"><DataColumn1>hello1</DataColumn1><DataColumn2>1</DataColumn2><DataColumn3>2010-06-29T00:00:00+01:00</DataColumn3></DataTable1><DataTable1 diffgr:id="DataTable12" msdata:rowOrder="1" diffgr:hasChanges="inserted"><DataColumn1>hello2</DataColumn1><DataColumn2>2</DataColumn2><DataColumn3>2010-05-29T00:00:00+01:00</DataColumn3></DataTable1><DataTable1 diffgr:id="DataTable13" msdata:rowOrder="2" diffgr:hasChanges="inserted" /></AsmxTypedDataSet></diffgr:diffgram></Data></data></ProcessCompoundTypedDataSet></soap:Body></soap:Envelope>
+HTTP/1.1 200 OK
+Server: ASP.NET Development Server/9.0.0.0
+Date: Thu, 01 Jul 2010 07:56:03 GMT
+X-AspNet-Version: 2.0.50727
+Cache-Control: private, max-age=0
+Content-Type: text/xml; charset=utf-8
+Content-Length: 329
+Connection: Close
+
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ProcessCompoundTypedDataSetResponse xmlns="http://contoso.com/asmxservice/test" /></soap:Body></soap:Envelope>
+
+------------------------------------------------------------------
+

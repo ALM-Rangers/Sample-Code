@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--===============================================================================
+    Copyright (C) 2005 Microsoft Corporation
+    All rights reserved.
+    THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+    OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+    LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR
+    FITNESS FOR A PARTICULAR PURPOSE.
+   ==============================================================================
+-->
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
+	<Fragment Id='CustomActions'>
+			<!-- SetupTargetDirectory does not include the [ProductName] because we may have an
+			     installer with merge modules where the merge modules are the framework going to
+				 'Common' folder and the application going to its own folder.
+			-->
+		<CustomAction Id="SetupTargetDirectory" Property="TARGETDIR" Value="[ProgramFilesFolder]" Execute="firstSequence" />
+		<CustomAction Id='NewerVersionError' Error='A newer version is already installed'/>
+
+	</Fragment>
+</Wix>

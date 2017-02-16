@@ -1,0 +1,372 @@
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-02-21T08:33:49.3060000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="6940" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-02-21T08:33:49.2550000+00:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header>
+              <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IArithmetic/Add</Action>
+            </s:Header>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-02-21T08:33:49.3820000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="6940" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-02-21T08:33:49.3820000+00:00" Source="TransportSend" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <Addressing>
+            <Action>http://tempuri.org/IArithmetic/Add</Action>
+            <To>http://localhost:8081/arithmetic/basic</To>
+          </Addressing>
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"></s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-02-21T08:33:49.5300000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="6940" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-02-21T08:33:49.5300000+00:00" Source="TransportReceive" Type="System.ServiceModel.Channels.BufferedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <HttpResponse>
+            <StatusCode>OK</StatusCode>
+            <StatusDescription>OK</StatusDescription>
+            <WebHeaders>
+              <Content-Length>307</Content-Length>
+              <Content-Type>text/xml; charset=utf-8</Content-Type>
+              <Date>Wed, 21 Feb 2007 08:33:49 GMT</Date>
+              <Server>Microsoft-HTTPAPI/2.0</Server>
+            </WebHeaders>
+          </HttpResponse>
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header></s:Header>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-02-21T08:33:49.5310000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="6940" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-02-21T08:33:49.5310000+00:00" Source="ServiceLevelReceiveReply" Type="System.ServiceModel.Channels.BufferedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <HttpResponse>
+            <StatusCode>OK</StatusCode>
+            <StatusDescription>OK</StatusDescription>
+            <WebHeaders>
+              <Content-Length>307</Content-Length>
+              <Content-Type>text/xml; charset=utf-8</Content-Type>
+              <Date>Wed, 21 Feb 2007 08:33:49 GMT</Date>
+              <Server>Microsoft-HTTPAPI/2.0</Server>
+            </WebHeaders>
+          </HttpResponse>
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header></s:Header>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-02-21T08:33:49.5390000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="6940" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-02-21T08:33:49.5390000+00:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header>
+              <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IArithmetic/Add2</Action>
+            </s:Header>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-02-21T08:33:49.5390000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="6940" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-02-21T08:33:49.5390000+00:00" Source="TransportSend" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <Addressing>
+            <Action>http://tempuri.org/IArithmetic/Add2</Action>
+            <To>http://localhost:8081/arithmetic/basic</To>
+          </Addressing>
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"></s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-02-21T08:33:49.5410000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="6940" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-02-21T08:33:49.5410000+00:00" Source="TransportReceive" Type="System.ServiceModel.Channels.BufferedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <HttpResponse>
+            <StatusCode>OK</StatusCode>
+            <StatusDescription>OK</StatusDescription>
+            <WebHeaders>
+              <Content-Length>178</Content-Length>
+              <Content-Type>text/xml; charset=utf-8</Content-Type>
+              <Date>Wed, 21 Feb 2007 08:33:49 GMT</Date>
+              <Server>Microsoft-HTTPAPI/2.0</Server>
+            </WebHeaders>
+          </HttpResponse>
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header></s:Header>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-02-21T08:33:49.5410000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="6940" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-02-21T08:33:49.5410000+00:00" Source="ServiceLevelReceiveReply" Type="System.ServiceModel.Channels.BufferedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <HttpResponse>
+            <StatusCode>OK</StatusCode>
+            <StatusDescription>OK</StatusDescription>
+            <WebHeaders>
+              <Content-Length>178</Content-Length>
+              <Content-Type>text/xml; charset=utf-8</Content-Type>
+              <Date>Wed, 21 Feb 2007 08:33:49 GMT</Date>
+              <Server>Microsoft-HTTPAPI/2.0</Server>
+            </WebHeaders>
+          </HttpResponse>
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header></s:Header>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-02-21T08:33:49.5420000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="6940" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-02-21T08:33:49.5420000+00:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Channels.BodyWriterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header>
+              <Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://tempuri.org/IArithmetic/Add3</Action>
+            </s:Header>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-02-21T08:33:49.5420000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="6940" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-02-21T08:33:49.5420000+00:00" Source="TransportSend" Type="System.ServiceModel.Channels.BodyWriterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <Addressing>
+            <Action>http://tempuri.org/IArithmetic/Add3</Action>
+            <To>http://localhost:8081/arithmetic/basic</To>
+          </Addressing>
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"></s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-02-21T08:33:49.5440000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="6940" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-02-21T08:33:49.5440000+00:00" Source="TransportReceive" Type="System.ServiceModel.Channels.BufferedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <HttpResponse>
+            <StatusCode>OK</StatusCode>
+            <StatusDescription>OK</StatusDescription>
+            <WebHeaders>
+              <Content-Length>178</Content-Length>
+              <Content-Type>text/xml; charset=utf-8</Content-Type>
+              <Date>Wed, 21 Feb 2007 08:33:49 GMT</Date>
+              <Server>Microsoft-HTTPAPI/2.0</Server>
+            </WebHeaders>
+          </HttpResponse>
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header></s:Header>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+  <System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+    <EventID>0</EventID>
+    <Type>3</Type>
+    <SubType Name="Information">0</SubType>
+    <Level>8</Level>
+    <TimeCreated SystemTime="2007-02-21T08:33:49.5440000Z" />
+    <Source Name="System.ServiceModel.MessageLogging" />
+    <Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+    <Execution ProcessName="Client" ProcessID="6940" ThreadID="1" />
+    <Channel/>
+    <Computer>RJARRATT003</Computer>
+  </System>
+  <ApplicationData>
+    <TraceData>
+      <DataItem>
+        <MessageLogTraceRecord Time="2007-02-21T08:33:49.5440000+00:00" Source="ServiceLevelReceiveReply" Type="System.ServiceModel.Channels.BufferedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+          <HttpResponse>
+            <StatusCode>OK</StatusCode>
+            <StatusDescription>OK</StatusDescription>
+            <WebHeaders>
+              <Content-Length>178</Content-Length>
+              <Content-Type>text/xml; charset=utf-8</Content-Type>
+              <Date>Wed, 21 Feb 2007 08:33:49 GMT</Date>
+              <Server>Microsoft-HTTPAPI/2.0</Server>
+            </WebHeaders>
+          </HttpResponse>
+          <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+            <s:Header></s:Header>
+          </s:Envelope>
+        </MessageLogTraceRecord>
+      </DataItem>
+    </TraceData>
+  </ApplicationData>
+</E2ETraceEvent>

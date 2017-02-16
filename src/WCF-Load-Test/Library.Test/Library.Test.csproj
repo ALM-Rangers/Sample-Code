@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3049524D-30B0-445A-959E-8FAFB3337A50}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Microsoft.WcfUnit.Library.Test</RootNamespace>
+    <AssemblyName>Microsoft.WcfUnit.Library.Test</AssemblyName>
+    <WarningLevel>4</WarningLevel>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName />
+    <SccLocalPath />
+    <SccAuxPath />
+    <SccProvider />
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\wcfunit.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags></FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation></UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>WebTest</TestProjectType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <NoWarn>0067</NoWarn>
+    <CodeAnalysisRuleSet>..\TestCodeRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <CodeAnalysisRuleSet>..\TestCodeRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <DebugType>pdbonly</DebugType>
+    <NoWarn>0067</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.LoadTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Rhino.Mocks">
+      <HintPath>..\..\ExternalReferences\Rhino.Mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Common\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="ProxyManagerTests.cs" />
+    <Compile Include="DeserializerTests.cs" />
+    <Compile Include="TestContracts\IContractWithOverloadedMethods.cs" />
+    <Compile Include="TestContracts\IDataContractFormatServiceContract.cs" />
+    <Compile Include="TestContracts\IDefaultSoapActionWithContractNamespace.cs" />
+    <Compile Include="TestContracts\IDefaultSoapActionWithContractNamespaceAndSlash.cs" />
+    <Compile Include="TestContracts\IDefaultSoapActionWithContractNamespaceAndSlashAndNameThatOverridesTypeName.cs" />
+    <Compile Include="TestContracts\IDefaultSoapActionWithDefaultContractNamespace.cs" />
+    <Compile Include="TestContracts\IDefaultSoapActionWithDefaultContractNamespaceAndNameThatOverridesTypeName.cs" />
+    <Compile Include="TestContracts\IDefaultSoapActionWithEmptyContractNamespace.cs" />
+    <Compile Include="TestContracts\IDefaultSoapActionWithEmptyContractNamespaceAndNameThatOverridesTypeName.cs" />
+    <Compile Include="TestContracts\IFormatlessServiceContract.cs" />
+    <Compile Include="TestContracts\IOperationContractWithoutServiceContract.cs" />
+    <Compile Include="TestContracts\IServiceContractInterface.cs" />
+    <Compile Include="TestContracts\IUTGTestContract.cs" />
+    <Compile Include="TestContracts\IXmlSerializerAtClassLevel.cs" />
+    <Compile Include="TestContracts\IXmlSerializerAtMethodLevel.cs" />
+    <Compile Include="TestContracts\IXmlSerializerFormatServiceContract.cs" />
+    <Compile Include="TestContracts\IXmlSerializerService.cs" />
+    <Compile Include="TestContracts\ProxyClassForOperationContractTestInterfaces.cs" />
+    <Compile Include="TestContracts\ServiceContract2Class.cs" />
+    <Compile Include="TestContracts\ServiceContract2ClassCommunicationObjectProxy.cs" />
+    <Compile Include="TestContracts\ServiceContractClass.cs" />
+    <Compile Include="TestContracts\ServiceContractClassNonCommunicationObjectProxy.cs" />
+    <Compile Include="TestContracts\ServiceContractClassSelfProxy.cs" />
+    <Compile Include="TestContracts\IDefaultSoapActionWithContractNamespaceAndNameThatOverridesTypeName.cs" />
+    <Compile Include="TestContracts\ServiceContractInterfaceNonCommunicationObjectProxy.cs" />
+    <Compile Include="TestContracts\TypedDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TypedDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TestContracts\UTGTestContractClass.cs" />
+    <Compile Include="TestContracts\UTGTestContractClassProxyCommObject.cs" />
+    <Compile Include="TestContracts\UTGTestReferenceType.cs" />
+    <Compile Include="TestContracts\XmlSerializerRequest.cs" />
+    <Compile Include="TraceFileProcessorTests.cs" />
+    <Compile Include="ParserTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CustomDictionary.xml">
+      <Link>CustomDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+    <Content Include="TestData\NoMessageBodies.svclog" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestData\WithMessageBodies.svclog" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestData\NoServiceLevelLogging.svclog" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SampleFiddlerConfig.xml" />
+    <Content Include="SampleConfig.xml" />
+    <Content Include="SampleTimings.txt" />
+    <Compile Include="ConfigurationExtensionTests.cs" />
+    <Compile Include="ConfigurationTests.cs" />
+    <Compile Include="AsmxSerializationInfoTests.cs" />
+    <Compile Include="FiddlerTextParserTests.cs" />
+    <Compile Include="FiddlerTraceFileTestData.cs" />
+    <Compile Include="FormatParserBaseTests.cs" />
+    <Compile Include="ObjectGeneratorTests.cs" />
+    <Compile Include="TestContracts\UTGTestContractProxyCommObject.cs" />
+    <Compile Include="WcfTraceFileTestData.cs" />
+    <Compile Include="TimedCommentTests.cs" />
+    <Compile Include="TestHelper.cs" />
+    <Compile Include="TimingsFileTests.cs" />
+    <Compile Include="UILogicTests.cs" />
+    <Compile Include="UnitTestGeneratorTests.cs" />
+    <Compile Include="UtilityTests.cs" />
+    <Compile Include="ScenarioRunManagerTests.cs" />
+    <Compile Include="WcfParserTests.cs" />
+    <Compile Include="WcfSerializationInfoTests.cs" />
+    <Compile Include="TestContracts\TestDataContracts.cs" />
+    <None Include="GeneratedSampleLoadTest.loadtest" />
+    <None Include="TestData\AsmxBareSoap11.svclog" />
+    <None Include="TestData\AsmxBareSoap12.svclog" />
+    <Content Include="TestData\AsmxFiddlerIntegrationTest.txt" />
+    <None Include="TestData\AsmxIntegrationTest.svclog" />
+    <None Include="TestData\AsmxWrappedMultiParameterSoap11.svclog" />
+    <None Include="TestData\AsmxWrappedMultiParameterSoap12.svclog" />
+    <None Include="TestData\AsmxWrappedSoap11.svclog" />
+    <None Include="TestData\AsmxWrappedSoap12.svclog" />
+    <None Include="TestData\ExplicitInterface.svclog" />
+    <None Include="TestData\FullSampleTest.svclog" />
+    <None Include="TestData\FullSampleTestServiceTrace.svclog" />
+    <None Include="TestData\MessageContract.svclog" />
+    <None Include="TestData\MessageContractStreamOperationsClientSide.svclog" />
+    <None Include="TestData\MessageContractStreamOperationsServiceSide.svclog" />
+    <None Include="TestData\MixedDirectionParameters.svclog" />
+    <None Include="TestData\NoParameters.svclog" />
+    <None Include="TestData\OutParameter.svclog" />
+    <None Include="TestData\OverloadedContractMethods.svclog" />
+    <None Include="TestData\RefObjectParameter.svclog" />
+    <None Include="TestData\RefParameter.svclog" />
+    <None Include="TestData\SampleWithNamespaces.svclog" />
+    <None Include="TestData\ServiceKnownType.svclog" />
+    <None Include="TestData\ServiceSideLog.svclog" />
+    <None Include="TestData\StreamOperations.svclog" />
+    <None Include="TestContracts\TypedDataSet.xsc">
+      <DependentUpon>TypedDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TestContracts\TypedDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TypedDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TestContracts\TypedDataSet.xss">
+      <DependentUpon>TypedDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SampleClientAndService\Contracts.Custom\Contracts.Custom.csproj">
+      <Project>{D16F1CEE-1FF0-4D02-A956-DFF8E5594D92}</Project>
+      <Name>Contracts.Custom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{7227D608-F73C-4705-9806-5D77D2AC65F7}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SampleClientAndService\ClientProxies\ClientProxies.csproj">
+      <Project>{2CF53F44-EEF8-4948-A3B2-9C50947C1640}</Project>
+      <Name>ClientProxies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SampleClientAndService\Contracts\Contracts.csproj">
+      <Project>{8702279C-D94A-4706-8C7C-90CE928997FD}</Project>
+      <Name>Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestData\ComplexSample\" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+</Project>

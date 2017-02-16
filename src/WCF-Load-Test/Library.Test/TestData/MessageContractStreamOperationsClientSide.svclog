@@ -1,0 +1,656 @@
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:37:58.6933680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:37:58.5733680+01:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpRequest>
+						<Method>POST</Method>
+						<QueryString></QueryString>
+						<WebHeaders>
+							<VsDebuggerCausalityData>uIDPo94p8nnVEEVPouA1swbhlVYAAAAA1/FtTN/2bkSAnJs8woN2PPajfGNptolOgMb25hKR/8wACAAA</VsDebuggerCausalityData>
+						</WebHeaders>
+					</HttpRequest>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://contoso.com/service/test/IBufferedStreamService/BufferedUnwrappedMessageWithMemoryStream</Action>
+							<h:Header xmlns:h="http://contoso.com/service/test">1</h:Header>
+						</s:Header>
+						<s:Body>
+							<Body2 xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.IO" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://contoso.com/service/test">
+								<__identity i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/System"></__identity>
+								<d3p1:_buffer></d3p1:_buffer>
+								<d3p1:_capacity>256</d3p1:_capacity>
+								<d3p1:_expandable>true</d3p1:_expandable>
+								<d3p1:_exposable>true</d3p1:_exposable>
+								<d3p1:_isOpen>true</d3p1:_isOpen>
+								<d3p1:_length>127</d3p1:_length>
+								<d3p1:_origin>0</d3p1:_origin>
+								<d3p1:_position>0</d3p1:_position>
+								<d3p1:_writable>true</d3p1:_writable>
+							</Body2>
+						</s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:37:58.8363680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:37:58.8353680+01:00" Source="ServiceLevelReceiveReply" Type="System.ServiceModel.Channels.BufferedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpResponse>
+						<StatusCode>OK</StatusCode>
+						<StatusDescription>OK</StatusDescription>
+						<WebHeaders>
+							<Content-Length>291</Content-Length>
+							<Content-Type>text/xml; charset=utf-8</Content-Type>
+							<Date>Fri, 15 Aug 2008 08:37:58 GMT</Date>
+							<Server>Microsoft-HTTPAPI/2.0</Server>
+						</WebHeaders>
+					</HttpResponse>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<ActivityId CorrelationId="20eee667-9543-4b8e-9909-b17f895733e4" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">0824ecbd-0171-40fd-bff9-61b4c23f415f</ActivityId>
+						</s:Header>
+						<s:Body></s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:37:58.8403680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:37:58.8373680+01:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpRequest>
+						<Method>POST</Method>
+						<QueryString></QueryString>
+						<WebHeaders>
+							<VsDebuggerCausalityData>uIDPo98p8nnVEEVPouA1swbhlVYAAAAA1/FtTN/2bkSAnJs8woN2PPajfGNptolOgMb25hKR/8wACAAA</VsDebuggerCausalityData>
+						</WebHeaders>
+					</HttpRequest>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://contoso.com/service/test/IBufferedStreamService/BufferedUnwrappedMessageWithStream</Action>
+							<h:Header xmlns:h="http://contoso.com/service/test">1</h:Header>
+						</s:Header>
+						<s:Body>... stream ...</s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:37:58.8533680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:37:58.8533680+01:00" Source="ServiceLevelReceiveReply" Type="System.ServiceModel.Channels.BufferedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpResponse>
+						<StatusCode>OK</StatusCode>
+						<StatusDescription>OK</StatusDescription>
+						<WebHeaders>
+							<Content-Length>291</Content-Length>
+							<Content-Type>text/xml; charset=utf-8</Content-Type>
+							<Date>Fri, 15 Aug 2008 08:37:58 GMT</Date>
+							<Server>Microsoft-HTTPAPI/2.0</Server>
+						</WebHeaders>
+					</HttpResponse>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<ActivityId CorrelationId="9f296018-12d6-47bb-b126-789cdbd05518" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">813787df-4fe4-4dc7-a0a9-61af5ace1e16</ActivityId>
+						</s:Header>
+						<s:Body></s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:37:58.8553680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:37:58.8553680+01:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpRequest>
+						<Method>POST</Method>
+						<QueryString></QueryString>
+						<WebHeaders>
+							<VsDebuggerCausalityData>uIDPo+Ap8nnVEEVPouA1swbhlVYAAAAA1/FtTN/2bkSAnJs8woN2PPajfGNptolOgMb25hKR/8wACAAA</VsDebuggerCausalityData>
+						</WebHeaders>
+					</HttpRequest>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://contoso.com/service/test/IBufferedStreamService/BufferedWrappedMessageWithMemoryStream</Action>
+							<h:Header xmlns:h="http://contoso.com/service/test">1</h:Header>
+						</s:Header>
+						<s:Body>
+							<MyWrapper xmlns="http://wrapper/BufferedWrappedMessageWithMemoryStream">
+								<Body4 xmlns:d4p1="http://schemas.datacontract.org/2004/07/System.IO" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://contoso.com/service/test">
+									<__identity i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/System"></__identity>
+									<d4p1:_buffer></d4p1:_buffer>
+									<d4p1:_capacity>256</d4p1:_capacity>
+									<d4p1:_expandable>true</d4p1:_expandable>
+									<d4p1:_exposable>true</d4p1:_exposable>
+									<d4p1:_isOpen>true</d4p1:_isOpen>
+									<d4p1:_length>127</d4p1:_length>
+									<d4p1:_origin>0</d4p1:_origin>
+									<d4p1:_position>0</d4p1:_position>
+									<d4p1:_writable>true</d4p1:_writable>
+								</Body4>
+							</MyWrapper>
+						</s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:37:58.8583680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:37:58.8583680+01:00" Source="ServiceLevelReceiveReply" Type="System.ServiceModel.Channels.BufferedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpResponse>
+						<StatusCode>OK</StatusCode>
+						<StatusDescription>OK</StatusDescription>
+						<WebHeaders>
+							<Content-Length>291</Content-Length>
+							<Content-Type>text/xml; charset=utf-8</Content-Type>
+							<Date>Fri, 15 Aug 2008 08:37:58 GMT</Date>
+							<Server>Microsoft-HTTPAPI/2.0</Server>
+						</WebHeaders>
+					</HttpResponse>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<ActivityId CorrelationId="4c657ac4-ad82-4198-8559-93835caab527" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">b1b81b62-b170-4efe-8809-c5544b037709</ActivityId>
+						</s:Header>
+						<s:Body></s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:37:58.8593680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:37:58.8593680+01:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpRequest>
+						<Method>POST</Method>
+						<QueryString></QueryString>
+						<WebHeaders>
+							<VsDebuggerCausalityData>uIDPo+Ep8nnVEEVPouA1swbhlVYAAAAA1/FtTN/2bkSAnJs8woN2PPajfGNptolOgMb25hKR/8wACAAA</VsDebuggerCausalityData>
+						</WebHeaders>
+					</HttpRequest>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://contoso.com/service/test/IBufferedStreamService/BufferedWrappedMessageWithStream</Action>
+							<h:Header xmlns:h="http://contoso.com/service/test">1</h:Header>
+						</s:Header>
+						<s:Body>
+							<MyWrapper xmlns="http://wrapper/BufferedWrappedMessageWithStream">
+								<Body3 xmlns="http://contoso.com/service/test"></Body3>
+							</MyWrapper>
+						</s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:37:58.8793680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:37:58.8793680+01:00" Source="ServiceLevelReceiveReply" Type="System.ServiceModel.Channels.BufferedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpResponse>
+						<StatusCode>OK</StatusCode>
+						<StatusDescription>OK</StatusDescription>
+						<WebHeaders>
+							<Content-Length>291</Content-Length>
+							<Content-Type>text/xml; charset=utf-8</Content-Type>
+							<Date>Fri, 15 Aug 2008 08:37:58 GMT</Date>
+							<Server>Microsoft-HTTPAPI/2.0</Server>
+						</WebHeaders>
+					</HttpResponse>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<ActivityId CorrelationId="9f92d10e-fa2a-4cfe-aa72-e73b90ab7a69" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">94f4c087-86f9-4902-b85e-78793510e1e6</ActivityId>
+						</s:Header>
+						<s:Body></s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:37:58.8803680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:37:58.8793680+01:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpRequest>
+						<Method>POST</Method>
+						<QueryString></QueryString>
+						<WebHeaders>
+							<VsDebuggerCausalityData>uIDPo+Ip8nnVEEVPouA1swbhlVYAAAAA1/FtTN/2bkSAnJs8woN2PPajfGNptolOgMb25hKR/8wACAAA</VsDebuggerCausalityData>
+						</WebHeaders>
+					</HttpRequest>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://contoso.com/service/test/IStreamedStreamService/StreamedUnwrappedMessageWithMemoryStream</Action>
+							<h:Header xmlns:h="http://contoso.com/service/test">1</h:Header>
+						</s:Header>
+						<s:Body>
+							<Body2 xmlns:d3p1="http://schemas.datacontract.org/2004/07/System.IO" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://contoso.com/service/test">
+								<__identity i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/System"></__identity>
+								<d3p1:_buffer></d3p1:_buffer>
+								<d3p1:_capacity>256</d3p1:_capacity>
+								<d3p1:_expandable>true</d3p1:_expandable>
+								<d3p1:_exposable>true</d3p1:_exposable>
+								<d3p1:_isOpen>true</d3p1:_isOpen>
+								<d3p1:_length>127</d3p1:_length>
+								<d3p1:_origin>0</d3p1:_origin>
+								<d3p1:_position>0</d3p1:_position>
+								<d3p1:_writable>true</d3p1:_writable>
+							</Body2>
+						</s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:37:59.1183680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:37:59.1183680+01:00" Source="ServiceLevelReceiveReply" Type="System.ServiceModel.Channels.StreamedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpResponse>
+						<StatusCode>OK</StatusCode>
+						<StatusDescription>OK</StatusDescription>
+						<WebHeaders>
+							<Transfer-Encoding>chunked</Transfer-Encoding>
+							<Content-Type>text/xml; charset=utf-8</Content-Type>
+							<Date>Fri, 15 Aug 2008 08:37:58 GMT</Date>
+							<Server>Microsoft-HTTPAPI/2.0</Server>
+						</WebHeaders>
+					</HttpResponse>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<ActivityId CorrelationId="e618da97-99ff-47b0-8fdd-13800a233141" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">ba047cd4-752e-43bc-af74-5a0ca6115a90</ActivityId>
+						</s:Header>
+						<s:Body>... stream ...</s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:37:59.1193680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:37:59.1193680+01:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpRequest>
+						<Method>POST</Method>
+						<QueryString></QueryString>
+						<WebHeaders>
+							<VsDebuggerCausalityData>uIDPo+Mp8nnVEEVPouA1swbhlVYAAAAA1/FtTN/2bkSAnJs8woN2PPajfGNptolOgMb25hKR/8wACAAA</VsDebuggerCausalityData>
+						</WebHeaders>
+					</HttpRequest>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://contoso.com/service/test/IStreamedStreamService/StreamedUnwrappedMessageWithStream</Action>
+							<h:Header xmlns:h="http://contoso.com/service/test">1</h:Header>
+						</s:Header>
+						<s:Body>... stream ...</s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:38:00.1213680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:38:00.1213680+01:00" Source="ServiceLevelReceiveReply" Type="System.ServiceModel.Channels.StreamedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpResponse>
+						<StatusCode>OK</StatusCode>
+						<StatusDescription>OK</StatusDescription>
+						<WebHeaders>
+							<Transfer-Encoding>chunked</Transfer-Encoding>
+							<Content-Type>text/xml; charset=utf-8</Content-Type>
+							<Date>Fri, 15 Aug 2008 08:38:00 GMT</Date>
+							<Server>Microsoft-HTTPAPI/2.0</Server>
+						</WebHeaders>
+					</HttpResponse>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<ActivityId CorrelationId="7c546bc2-69dd-4fe2-8d6b-520e0de36ec7" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">99c31c38-1a16-4f1f-8dc7-59c5425ca474</ActivityId>
+						</s:Header>
+						<s:Body>... stream ...</s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:38:00.1223680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:38:00.1223680+01:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpRequest>
+						<Method>POST</Method>
+						<QueryString></QueryString>
+						<WebHeaders>
+							<VsDebuggerCausalityData>uIDPo+Qp8nnVEEVPouA1swbhlVYAAAAA1/FtTN/2bkSAnJs8woN2PPajfGNptolOgMb25hKR/8wACAAA</VsDebuggerCausalityData>
+						</WebHeaders>
+					</HttpRequest>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://contoso.com/service/test/IStreamedStreamService/StreamedWrappedMessageWithMemoryStream</Action>
+							<h:Header xmlns:h="http://contoso.com/service/test">1</h:Header>
+						</s:Header>
+						<s:Body>
+							<MyWrapper xmlns="http://wrapper/StreamedWrappedMessageWithMemoryStream">
+								<Body4 xmlns:d4p1="http://schemas.datacontract.org/2004/07/System.IO" xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://contoso.com/service/test">
+									<__identity i:nil="true" xmlns="http://schemas.datacontract.org/2004/07/System"></__identity>
+									<d4p1:_buffer></d4p1:_buffer>
+									<d4p1:_capacity>256</d4p1:_capacity>
+									<d4p1:_expandable>true</d4p1:_expandable>
+									<d4p1:_exposable>true</d4p1:_exposable>
+									<d4p1:_isOpen>true</d4p1:_isOpen>
+									<d4p1:_length>127</d4p1:_length>
+									<d4p1:_origin>0</d4p1:_origin>
+									<d4p1:_position>0</d4p1:_position>
+									<d4p1:_writable>true</d4p1:_writable>
+								</Body4>
+							</MyWrapper>
+						</s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:38:00.2923680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:38:00.2913680+01:00" Source="ServiceLevelReceiveReply" Type="System.ServiceModel.Channels.StreamedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpResponse>
+						<StatusCode>OK</StatusCode>
+						<StatusDescription>OK</StatusDescription>
+						<WebHeaders>
+							<Transfer-Encoding>chunked</Transfer-Encoding>
+							<Content-Type>text/xml; charset=utf-8</Content-Type>
+							<Date>Fri, 15 Aug 2008 08:38:00 GMT</Date>
+							<Server>Microsoft-HTTPAPI/2.0</Server>
+						</WebHeaders>
+					</HttpResponse>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<ActivityId CorrelationId="863a89ab-e133-4f0e-b0b6-d61c52059c62" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">fb32e359-ca8d-4f55-9fcf-fe759082738c</ActivityId>
+						</s:Header>
+						<s:Body>... stream ...</s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:38:00.2933680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:38:00.2923680+01:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpRequest>
+						<Method>POST</Method>
+						<QueryString></QueryString>
+						<WebHeaders>
+							<VsDebuggerCausalityData>uIDPo+Up8nnVEEVPouA1swbhlVYAAAAA1/FtTN/2bkSAnJs8woN2PPajfGNptolOgMb25hKR/8wACAAA</VsDebuggerCausalityData>
+						</WebHeaders>
+					</HttpRequest>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://contoso.com/service/test/IStreamedStreamService/StreamedWrappedMessageWithStream</Action>
+							<h:Header xmlns:h="http://contoso.com/service/test">1</h:Header>
+						</s:Header>
+						<s:Body>
+							<MyWrapper xmlns="http://wrapper/StreamedWrappedMessageWithStream">
+								<Body3 xmlns="http://contoso.com/service/test"></Body3>
+							</MyWrapper>
+						</s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-08-15T08:38:00.2963680Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="2788" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-08-15T09:38:00.2963680+01:00" Source="ServiceLevelReceiveReply" Type="System.ServiceModel.Channels.StreamedMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpResponse>
+						<StatusCode>OK</StatusCode>
+						<StatusDescription>OK</StatusDescription>
+						<WebHeaders>
+							<Transfer-Encoding>chunked</Transfer-Encoding>
+							<Content-Type>text/xml; charset=utf-8</Content-Type>
+							<Date>Fri, 15 Aug 2008 08:38:00 GMT</Date>
+							<Server>Microsoft-HTTPAPI/2.0</Server>
+						</WebHeaders>
+					</HttpResponse>
+					<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+						<s:Header>
+							<ActivityId CorrelationId="42e0af79-f9e5-4843-b7fe-b03f62653a8b" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">3a901e27-a01b-4829-93fc-6cb8863bc942</ActivityId>
+						</s:Header>
+						<s:Body>... stream ...</s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>

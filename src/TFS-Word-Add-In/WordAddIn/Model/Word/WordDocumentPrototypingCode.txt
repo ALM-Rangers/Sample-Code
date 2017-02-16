@@ -1,0 +1,267 @@
+﻿'---------------------------------------------------------------------
+'    Copyright (c) Microsoft. All rights reserved.
+'    This code is licensed under the MIT License.
+'    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF 
+'    ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 
+'    TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+'    PARTICULAR PURPOSE AND NONINFRINGEMENT.
+'---------------------------------------------------------------------
+'Sub ContentControlTest()
+'Dim d As Document
+'Set d = Application.ActiveDocument
+
+'Dim relative As Range
+'Set relative = d.Application.Selection.Range
+'relative.Collapse (wdCollapseEnd)
+
+'Dim group As ContentControl
+'Set group = d.ContentControls.Add(wdContentControlGroup, relative)
+'Set group = d.ContentControls.Add(wdContentControlBuildingBlock, relative)
+'Set group = d.ContentControls.Add(wdContentControlRichText, relative)
+'group.Tag = "RJ2"
+
+'Dim bb As BuildingBlock
+'Dim template As template
+'Set template = d.AttachedTemplate
+'Set bb = template.BuildingBlockTypes(wdTypeCustom1).Categories("TFS_Table Row Per Work Item").BuildingBlocks("Default")
+'Dim ans As Range
+'Set ans = bb.Insert(group.Range)
+
+'End Sub
+Sub Test()
+' TODO. ALSO INSERT NEW IN MIDDLE  NEEDS TO BE HALF OF SWAP.
+' test start, middle and end of sequences, test with table at very start of doc
+Application.Options.SmartCutPaste = False
+Dim bb As buildingBlock
+Set bb = GetBuildingBlock("TFS_Table Row Per Work Item", "Default")
+'MoveBookmarkAndContentToBefore "TFS_WI_Q2_W1613", "TFS_WI_Q2_W1612"
+'MoveBookmarkAndContentToBefore "TFS_WI_Q1_W1614", "TFS_WI_Q1_W1612"
+'MoveBookmarkAndContentToBefore "TFS_WI_Q1_W1615", "TFS_WI_Q1_W1612"
+'MoveBookmarkAndContentToBefore "TFS_WI_Q2_W1614", "TFS_WI_Q2_W1612"
+'DeleteBookmarkAndContent "TFS_WI_Q2_W1612"
+InsertBuildingBlockBeforeBookmark bb, "TFS_WI_Q2_W1612"
+'InsertBuildingBlockAfterBookmark bb, "TFS_WI_Q1_W1615"
+'MoveBookmarkAndContentToBefore "TFS_WI_Q0_W1614", "TFS_WI_Q0_W1612"
+Application.Options.SmartCutPaste = True
+End Sub
+Sub InsertBuildingBlockBeforeBookmark(bb As buildingBlock, relativeBookmarkName As String)
+  Dim temp As range
+  Dim relative As range
+  Set temp = CreateTemporaryRange()
+  Set temp = bb.Insert(temp)
+  Dim rw As Row
+  Set relative = Application.ActiveDocument.Bookmarks(relativeBookmarkName).range
+  Set rw = RowStartingInRange(relative)
+  relative.Collapse wdCollapseStart
+  ReplaceRangeContent rw, relative, temp, "new"
+  DeleteTemporaryRange temp
+End Sub
+Sub InsertBuildingBlockAfterBookmark(bb As buildingBlock, relativeBookmarkName As String)
+  Dim temp As range
+  Dim relative As range
+  Set temp = CreateTemporaryRange()
+  Set temp = bb.Insert(temp)
+  Dim rw As Row
+  Set relative = Application.ActiveDocument.Bookmarks(relativeBookmarkName).range
+  Set rw = RowStartingInRange(relative)
+  If Not rw Is Nothing Then
+    Dim t As Table
+    Set t = rw.Parent
+    If rw.Index < t.Rows.Count Then Set rw = t.Rows(rw.Index + 1)
+  End If
+  relative.Collapse wdCollapseEnd
+  ReplaceRangeContent rw, relative, temp, "new"
+  DeleteTemporaryRange temp
+End Sub
+Function GetBuildingBlock(category As String, name As String)
+  Dim template As template
+  Set template = Application.ActiveDocument.AttachedTemplate
+  Set GetBuildingBlock = template.BuildingBlockTypes(wdTypeCustom1).Categories(category).BuildingBlocks(name)
+End Function
+Sub MoveBookmarkAndContentToBefore(sourceName As String, relativeName As String)
+Dim d As Document
+Set d = Application.ActiveDocument
+
+Dim r1 As range
+Set r1 = d.Bookmarks(relativeName).range
+
+Dim r2 As range
+Set r2 = d.Bookmarks(sourceName).range
+
+Dim rw As Row
+Set rw = RowStartingInRange(r1)
+r1.Collapse wdCollapseStart
+ReplaceRangeContent rw, r1, r2, sourceName
+DeleteRange r2
+
+'Dim adjacent As Boolean
+'adjacent = r1.End = r2.start
+'
+'Dim temp As Range
+'Set temp = CreateTemporaryRange
+'temp.FormattedText = r1
+'Dim rw1 As Row
+'Set rw1 = RowStartingInRange(r1)
+'Dim rw2 As Row
+'Set rw2 = RowStartingInRange(r2)
+'
+'Replace rw1, r1, r2, sourceName
+'
+'If rw2 Is Nothing And adjacent Then
+'  r2.start = r2.start + r1.End - r1.start
+'End If
+'
+'Replace rw2, r2, temp, relativeName
+'
+'DeleteTemporaryRange temp
+
+End Sub
+Function CreateTemporaryRange()
+Dim temp As range
+Set temp = Application.ActiveDocument.range(0, 0)
+temp.Expand (wdStory)
+temp.Collapse (wdCollapseEnd)
+temp.InsertParagraphAfter
+temp.MoveStart wdCharacter, 1
+Set CreateTemporaryRange = temp
+End Function
+Sub DeleteTemporaryRange(temp As range)
+temp.Delete
+Dim rw As Row
+Set rw = RowStartingInRange(temp)
+If Not rw Is Nothing Then
+  Dim t As Table
+  Set t = rw.Parent
+  t.Delete
+End If
+temp.Delete
+End Sub
+Sub ReplaceRangeContent(rw As Row, dest As range, source As range, destBookmarkName As String)
+  Dim previousBookmark As Bookmark
+  Dim sourceLength As Integer
+  sourceLength = source.End - source.start
+  'Dim destLength As Integer
+  'destLength = dest.End - dest.start
+  If rw Is Nothing Then
+    Dim temp As Integer
+    Dim nextBookmark As Bookmark
+    Set nextBookmark = BookmarkThatStartsAt(dest.start)
+    dest.FormattedText = source
+    RedefineBookmark destBookmarkName, dest.start, dest.start + sourceLength
+    If Not nextBookmark Is Nothing Then
+      If nextBookmark.name <> destBookmarkName Then
+        RedefineBookmark nextBookmark.name, dest.start + sourceLength, nextBookmark.End
+      End If
+    End If
+  ElseIf IsTablePerWorkItem(source) Then 'rw.Index = 1 Then
+    Dim d As Document
+    Set d = dest.Document
+    Set previousBookmark = BookmarkThatStartsAt(dest.start)
+    dest.InsertBreak wdPageBreak
+    dest.FormattedText = source
+    dest.Collapse wdCollapseEnd
+    dest.End = dest.start + 1
+    dest.Delete
+    If Not previousBookmark Is Nothing Then
+      RedefineBookmark previousBookmark.name, dest.start, previousBookmark.End
+    End If
+    RedefineBookmark destBookmarkName, dest.End - sourceLength, dest.End
+  Else
+    Dim t As Table
+    Set t = rw.Parent
+    Dim previousRow As Row
+    If rw.Index > 1 Then
+      Set previousRow = t.Rows(rw.Index - 1)
+      Set previousBookmark = BookmarkThatStartsAt(previousRow.range.start)
+    End If
+    If dest.start = t.range.End Then
+      Set rw = t.Rows.Add
+    Else
+      Set rw = t.Rows.Add(rw)
+    End If
+      
+    If Not previousBookmark Is Nothing Then
+      RedefineBookmark previousBookmark.name, previousRow.range.start, previousRow.range.End
+    End If
+      
+    rw.range.FormattedText = source
+    Set dest = t.Rows(rw.Index - 1).range
+    
+    RedefineBookmark destBookmarkName, dest.start, dest.End
+    rw.Delete
+    End If
+End Sub
+Function IsTablePerWorkItem(ByRef newItemRange As range) As Boolean
+Dim ans As Boolean
+Dim rw As Row
+
+ans = False
+Set rw = RowStartingInRange(newItemRange)
+If Not rw Is Nothing Then
+  Dim t As Table
+  Set t = rw.Parent
+  ans = newItemRange.start < t.range.start Or newItemRange.End > t.range.End
+End If
+
+IsTablePerWorkItem = ans
+End Function
+Function RowStartingInRange(ByRef r As range) As Row
+Set RowStartingInRange = Nothing
+If r.Tables.Count > 0 Then
+  Dim rw As Row
+  Dim t As Table
+  Set t = r.Tables(1)
+  For i = 1 To t.Rows.Count
+    If r.start = t.Rows(i).range.start Then
+      Set RowStartingInRange = t.Rows(i)
+    End If
+  Next
+End If
+End Function
+
+Function BookmarkThatStartsAt(position As Integer) As Bookmark
+Set BookmarkThatStartsAt = Nothing
+For Each b In Application.ActiveDocument.Bookmarks
+  If b.range.start = position Then
+    Set BookmarkThatStartsAt = b
+  End If
+Next
+End Function
+
+Function BookmarkThatEndsAt(position As Integer) As Bookmark
+Set BookmarkThatEndsAt = Nothing
+For Each b In Application.ActiveDocument.Bookmarks
+  If b.range.End = position Then
+    Set BookmarkThatEndsAt = b
+  End If
+Next
+End Function
+
+Sub RedefineBookmark(name As String, startPos As Integer, endPos As Integer)
+If Application.ActiveDocument.Bookmarks.Exists(name) Then
+  Application.ActiveDocument.Bookmarks(name).Delete
+End If
+Application.ActiveDocument.Bookmarks.Add name, Application.ActiveDocument.range(startPos, endPos)
+End Sub
+
+Sub DeleteBookmarkAndContent(bookmarkName As String)
+Dim b As Bookmark
+Set b = Application.ActiveDocument.Bookmarks(bookmarkName)
+Dim toDelete As range
+Set toDelete = b.range
+
+b.Delete
+DeleteRange toDelete
+
+End Sub
+Sub DeleteRange(range As range)
+DeleteAllRowsInRange range
+If range.start <> range.End Then range.Delete
+End Sub
+Sub DeleteAllRowsInRange(r As range)
+For Each t In r.Tables
+  For Each rw In t.Rows
+    If rw.range.InRange(r) Then rw.Delete
+  Next
+Next
+End Sub

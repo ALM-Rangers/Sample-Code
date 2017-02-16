@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>WCF Test</Name>
+    <Description>Generates a unit test from a WCF trace file.</Description>
+    <Icon>WCFTestGenerator.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>80</SortOrder>
+    <DefaultName>WCFTest.cs</DefaultName>
+    <TemplateGroupID>TestProject-V1</TemplateGroupID>
+    <TemplateID>TestProject-V1-WCFScenarioTest</TemplateID>
+    <ShowByDefault>false</ShowByDefault>
+    <CustomDataSignature>TestProject-V1</CustomDataSignature>
+  </TemplateData>
+  <TemplateContent>
+    <References>
+      <Reference>
+        <Assembly>
+          System
+        </Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>
+          System.Xml
+        </Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>
+          System.ServiceModel
+        </Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>
+          System.Runtime.Serialization
+        </Assembly>
+      </Reference>
+      <Reference>
+        <Assembly>
+          Microsoft.VisualStudio.QualityTools.UnitTestFramework
+        </Assembly>
+      </Reference>
+    </References>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.cs">WCFTestTemplate.cs</ProjectItem>
+    <ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.Custom.cs">WCFTestTemplate.stubs</ProjectItem>
+  </TemplateContent>
+  <!--TestProjectData>
+    <LongDescription Package="{52CBD135-1F97-2580-011F-C7CD052E44DE}" ID="208"/>
+    <HelpKeyword Package="{52CBD135-1F97-2580-011F-C7CD052E44DE}" ID="213"/>
+  </TestProjectData-->
+  <WizardExtension>
+    <Assembly>Microsoft.WcfUnit.VSIntegration, Version=4.0.0.0, Culture=Neutral, PublicKeyToken=33a5eb443961c4bf</Assembly>
+    <FullClassName>Microsoft.WcfUnit.VSIntegration.ItemWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

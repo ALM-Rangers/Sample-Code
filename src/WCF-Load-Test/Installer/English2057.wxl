@@ -1,0 +1,14 @@
+﻿<?xml version='1.0'?>
+<WixLocalization xmlns='http://schemas.microsoft.com/wix/2006/localization' Culture='en-us' Codepage='1252'>
+  <String Id='Name'>WCF Load Test Generator for Visual Studio</String>
+  <String Id='Language'>2057</String>
+  <String Id='PackageLanguage'>0,1033,2057</String>
+	<String Id='Description'>A tool to create unit tests from WCF client traces, including a Microsoft Visual Studio 2010/2012 wizard.</String>
+	<String Id='Comments'>Requires administrative privileges to install. Dependencies are: .NET Framework 4.0 and Visual Studio 2010 and/or Visual Studio 2012</String>
+	<String Id='Keywords'>Installer,WCF, Unit Test, Load Test</String>
+
+	<String Id='ErrorFXRequirement'>Requires Microsoft .NET Framework 4.0 Client</String>
+	<String Id='ErrorVSRequirement'>Requires Microsoft Visual Studio 2010 Ultimate and/or Visual Studio 2012 Ultimate</String>
+  <String Id='ErrorNoDowngrade'>A later version of [ProductName] is already installed.</String>
+	
+</WixLocalization>

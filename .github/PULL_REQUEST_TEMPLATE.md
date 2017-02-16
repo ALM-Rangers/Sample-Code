@@ -1,5 +1,5 @@
 Thank you for your pull request!
-By completing this pull request, you agree to the [Contributing License Agreement](https://github.com/ALM-Rangers/@projectname@/blob/master/.github/CLA.md).
+By completing this pull request, you agree to the [Contributing License Agreement](https://github.com/ALM-Rangers/Sample-Code/blob/master/.github/CLA.md).
 
 Fixes # .
 
@@ -8,4 +8,4 @@ Changes proposed in this pull request:
 - 
 - 
 
-@ALM-Rangers/fileowner
+@ALM-Rangers/Sample-Code

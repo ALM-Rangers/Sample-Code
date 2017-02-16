@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?include ".\Preprocessor.wxi" ?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <ComponentGroup Id="VSExtensionComponents">
+      <Component Id="WordCommunication" Directory="VS11Common7IdePrivateAssemblies" Win64="no" >
+        <File Id="WordCommunication" Source="$(var.WordCommunication.TargetPath)" />
+      </Component>
+
+      <Component Id="WordExtension" Directory="UITestExtensionPackages" Win64="no">
+        <File Id="WordExtension" Name="$(var.WordExtension.TargetFileName)" Source="$(var.WordExtension.TargetPath)" />
+      </Component>
+
+      <?if $(var.Platform) = "x64"?>
+      <Component Id="WordExtension64" Directory="UITestExtensionPackages64" Win64="yes">
+        <File Id="WordExtension64" Name="$(var.WordExtension.TargetFileName)" Source="$(var.WordExtension.TargetPath)" />
+      </Component>
+      <?endif?>
+    </ComponentGroup>
+
+    <ComponentGroup Id="WordAddInComponents" Directory="INSTALLFOLDER" >
+
+      <Component Id="WordAddIn" Guid="{46C35C38-1B92-4D8D-8AE2-E00F518EC8C7}">
+        <File Id="WordAddIn" Source="$(var.WordAddIn.TargetPath)" />
+        <File Id="WordWordAddInManifest" Source="$(var.WordAddIn.TargetPath).manifest" />
+        <File Id="WordWordAddInVsto" Source="$(var.WordAddIn.TargetDir)$(var.WordAddIn.TargetName).vsto" />
+        <RegistryKey Root="HKCU" Key="Software\Microsoft\Office\Word\Addins\CuiWordPlugin">
+          <RegistryValue Name="Description" Type="string" Value="Microsoft Visual Studio ALM Rangers Visual Studio Coded UI Word Add-in for Word 2010" />
+          <RegistryValue Name="FriendlyName" Type="string" Value="Microsoft Visual Studio Coded UI Word 2010 Add-in" />
+          <RegistryValue Name="LoadBehavior" Type="integer" Value="3" />
+          <RegistryValue Name="Manifest" Type="string" Value="[INSTALLFOLDER]Microsoft.ALMRangers.UITest.Extension.WordWordAddIn.vsto|vstolocal" KeyPath="yes" />
+        </RegistryKey>
+      </Component>
+
+      <Component Id="WordCommunicationForAddin">
+        <File Id="WordCommunicationForAddin" Source="$(var.WordCommunication.TargetPath)" />
+      </Component>
+
+      <!--
+        According to http://msdn.microsoft.com/EN-US/library/ee712616(VS.110).aspx, only Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+        should be redistributed manually. All other files should be part of Microsoft Visual Studio 2010 Tools for Office Runtime (x86 and x64).
+        
+        See http://msdn.microsoft.com/EN-US/library/bb608617(VS.110).aspx for more infromation.
+      -->
+      <Component Id="MicrosoftOfficeToolsCommon40UtilitiesDll">
+        <File Id="MicrosoftOfficeToolsCommon40UtilitiesDll" Source="$(var.WordAddIn.TargetDir)Microsoft.Office.Tools.Common.v4.0.Utilities.dll" />
+      </Component>
+    </ComponentGroup>
+
+  </Fragment>
+</Wix>

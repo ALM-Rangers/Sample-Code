@@ -1,28 +1,34 @@
-[![Build Status](https://travis-ci.org/ALM-Rangers/GitHub-Base-Repo.svg?branch=master)](https://travis-ci.org/ALM-Rangers/GitHub-Base-Repo)
-#THIS PROJECT IS UNDER CONSTRUCTION *** PLEASE CHECK BACK LATER!
 
-TODO: Replace @projectname@ with your GitHub project name ion all files
-TODO: Create a folder src to contain all sources
+#Visual Studio ALM Rangers Sample Code
 
 #Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+Welcome to our collection of sample code. 
 
-#Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+It's an outlet for experiments. These samples are designed for reference only and are **not supported**, nor are any commitments made as to their longevity. Information and views expressed in these samples, may change without
+notice. You bear the risk of using it.
 
-#Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+#Samples
 
-##Contributors
+##Coded UI Microsoft Word Add-In
+This sample delivers practical and scenario based sample code and guidance for the Visual Studio Coded UI Microsoft Word Add-in, which extends the Coded UI feature support to Microsoft Word documents.
 
-We thank the following contributors for this extension: @.
+- Contributor: Bob Hardister
+- Tip copied from the **deprecated** [vsarcodeduiword](https://vsarcodeduiword.codeplex.com/) CodePlex project 
+- [Start here](src/Coded-UI)
 
-##Notices
-Notices for certain third party software included in this solution are provided here: [Third Party Notice](ThirdPartyNotices.txt).
+##TFS Word Add-In
+The Team Foundation Server Word Add-in sample imports work items from a Team Project and generates professional-looking documents. A typical scenario is requirements management in Word Doc format, allowing users to collaborate with the project team while using their favourite application. 
+
+- Contributor: Rob Jarratt
+- Tip copied from the **deprecated** [wcfloadtest](https://wcfloadtest.codeplex.com) CodePlex project 
+- [Start here](src/TFS-Word-Add-In)
+
+##WCF Load Test
+This sample tool takes a WCF trace file and a WCF client proxy, or a WCF interface contract, and generates a C# unit test that replays the same sequence of calls found in the trace file. The unit test can then be used to load-test the target
+
+- Contributor: Rob Jarratt
+- Tip copied from the **deprecated** [vsarword4tfs](https://vsarword4tfs.codeplex.com) CodePlex project 
+- [Start here](src/WCF-Load-Test)
 
 #Contribute
 Contributions to this project are welcome. Here is how you can contribute:  

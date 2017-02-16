@@ -1,0 +1,41 @@
+<E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">
+	<System xmlns="http://schemas.microsoft.com/2004/06/windows/eventlog/system">
+		<EventID>0</EventID>
+		<Type>3</Type>
+		<SubType Name="Information">0</SubType>
+		<Level>8</Level>
+		<TimeCreated SystemTime="2008-09-17T13:31:46.6508674Z" />
+		<Source Name="System.ServiceModel.MessageLogging" />
+		<Correlation ActivityID="{00000000-0000-0000-0000-000000000000}" />
+		<Execution ProcessName="Client.vshost" ProcessID="7140" ThreadID="9" />
+		<Channel/>
+		<Computer>RJARRATT000</Computer>
+	</System>
+	<ApplicationData>
+		<TraceData>
+			<DataItem>
+				<MessageLogTraceRecord Time="2008-09-17T14:31:46.6228646+01:00" Source="ServiceLevelSendRequest" Type="System.ServiceModel.Dispatcher.OperationFormatter+OperationFormatterMessage" xmlns="http://schemas.microsoft.com/2004/06/ServiceModel/Management/MessageTrace">
+					<HttpRequest>
+						<Method>POST</Method>
+						<QueryString></QueryString>
+						<WebHeaders>
+							<VsDebuggerCausalityData>uIDPo57rAoOsN11Lhse+HESthmYAAAAAk+1pTuYQfEG1YGMbtnWjEtUDxGX1aoVDmVbBo9zJQfkACAAA</VsDebuggerCausalityData>
+						</WebHeaders>
+					</HttpRequest>
+					<s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+						<s:Header>
+							<Action s:mustUnderstand="1" xmlns="http://schemas.microsoft.com/ws/2005/05/addressing/none">http://contoso.com/asmxservice/test/ProcessSimpleAsmxRequestWrapped</Action>
+						</s:Header>
+						<s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+							<ProcessSimpleAsmxRequestWrapped xmlns="http://contoso.com/asmxservice/test">
+								<r A="99">
+									<B>hello</B>
+								</r>
+							</ProcessSimpleAsmxRequestWrapped>
+						</s:Body>
+					</s:Envelope>
+				</MessageLogTraceRecord>
+			</DataItem>
+		</TraceData>
+	</ApplicationData>
+</E2ETraceEvent>

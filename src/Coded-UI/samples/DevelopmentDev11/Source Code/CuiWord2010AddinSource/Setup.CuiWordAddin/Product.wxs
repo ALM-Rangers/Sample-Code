@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?include ".\Preprocessor.wxi" ?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" 
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension" >
+	<Product Id="*" UpgradeCode="$(var.UpgradeCode)" Version="$(var.ProductVersion)" Language="1033" Codepage="1252" Name="$(var.ProductName)" Manufacturer="$(var.Manufacturer)" >
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Manufacturer="$(var.Manufacturer)" />
+    <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate CompressionLevel="high" EmbedCab="yes" />
+
+    <?if $(var.Platform) = "x86"?>
+    <Condition Message="This installation package is not supported by this processor type. Use the 64-bit installation package.">
+      <![CDATA[(NOT VersionNT64)]]>
+    </Condition>
+    <?endif?>
+
+    <Condition Message="This application requires .NET Framework 4.0 Client Profile. Please install the .NET Framework then run this installer again.">
+      <![CDATA[Installed OR NETFRAMEWORK40CLIENT]]>
+    </Condition>
+    
+    <!--
+      Detecting VSTO 4.0 runtime accourding to http://msdn.microsoft.com/en-us/vsto/ff937654.aspx
+    -->
+    <Property Id="VSTORUNTIMEREDIST">
+      <RegistrySearch Id="VSTORUNTIMEREDIST" Win64="no" Root="HKLM" Key="Software\Microsoft\VSTO Runtime Setup\V4R" Name="Version" Type="raw" />
+    </Property>
+    <Property Id="OFFICERUNTIME">
+      <RegistrySearch Id="OFFICERUNTIME" Win64="no" Root="HKLM" Key="Software\Microsoft\VSTO Runtime Setup\V4" Name="Version" Type="raw" />
+    </Property>
+
+    <Condition Message="The Visual Studio 2010 Tools for Office Runtime is not installed. Please download and install it from http://go.microsoft.com/fwlink/?LinkId=140384.">
+      <![CDATA[Installed OR (VSTORUNTIMEREDIST >= "10.0.30319") OR (OFFICERUNTIME >= "10.0.21022")]]>
+    </Condition>
+
+    <Feature Id="ProductFeature" Title="Setup.CuiWordAddin" Level="1">
+			<ComponentGroupRef Id="VSExtensionComponents" />
+      <ComponentGroupRef Id="WordAddInComponents" />
+    </Feature>
+
+    <PropertyRef Id="NETFRAMEWORK40CLIENT"/>
+    <PropertyRef Id="VS11_ROOT_FOLDER"/>
+
+    <UIRef Id="WixUI_Minimal" />
+
+  </Product>
+
+</Wix>

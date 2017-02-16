@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--===============================================================================
+    Copyright (C) 2007 Microsoft Corporation
+    All rights reserved.
+    THIS CODE AND INFORMATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+    OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+    LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR
+    FITNESS FOR A PARTICULAR PURPOSE.
+   ==============================================================================
+-->
+<Wix xmlns='http://schemas.microsoft.com/wix/2006/wi'>
+  <Fragment>
+
+    <Upgrade Id='{AAB46EA0-1614-4109-A6C5-43696C05FEA2}'>
+      <UpgradeVersion OnlyDetect='no' Property='OLDERFOUND' Minimum='1.0.0.0' IncludeMinimum='yes' Maximum='2.0.0.0' IncludeMaximum='no'/>
+      <UpgradeVersion OnlyDetect='yes' Property='NEWERFOUND' Minimum='2.0.0.0' IncludeMinimum='no' />
+    </Upgrade>
+
+    <CustomAction Id='NoDowngrade' Error='!(loc.ErrorNoDowngrade)' />
+
+    <Property Id='FXINSTALLED' Value='0' Secure='yes'>
+      <RegistrySearch Id='FxInstalledRegistry'
+							Key='SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Client'
+							Name='Install'
+							Root='HKLM'
+							Type='raw'/>
+    </Property>
+    <Condition Message='!(loc.ErrorFXRequirement)'>FXINSTALLED="#1"</Condition>
+
+    <Property Id='DEVENV2010PATH' Secure='yes'>
+      <RegistrySearch Id ='VS2010DevenvInstallLocationReg' Root='HKLM' Key='SOFTWARE\Microsoft\VisualStudio\SxS\VS7' Name='10.0' Type='directory'>
+        <DirectorySearch Id='VS2010IDEDir' Path='Common7\IDE'>
+          <FileSearch Id='VS2010DevenvFile' Name='devenv.exe'/>
+        </DirectorySearch>
+      </RegistrySearch>
+    </Property>
+
+    <Property Id='DEVENV2012PATH' Secure='yes'>
+      <RegistrySearch Id ='VS2012DevenvInstallLocationReg' Root='HKLM' Key='SOFTWARE\Microsoft\VisualStudio\SxS\VS7' Name='11.0' Type='directory'>
+        <DirectorySearch Id='VS2012IDEDir' Path='Common7\IDE'>
+          <FileSearch Id='VS2012DevenvFile' Name='devenv.exe'/>
+        </DirectorySearch>
+      </RegistrySearch>
+    </Property>
+
+    <Property Id='WIZARD2010DIR' Secure='yes'>
+      <RegistrySearch Id ='VS2010WizardInstallLocationReg' Root='HKLM' Key='SOFTWARE\Microsoft\VisualStudio\SxS\VS7' Name='10.0' Type='directory'>
+        <DirectorySearch Id='VS2010TemplateDir' Path='Common7\IDE\ItemTemplates\CSharp\1033'/>
+      </RegistrySearch>
+    </Property>
+
+    <Property Id='WIZARD2012DIR' Secure='yes'>
+      <RegistrySearch Id ='VS2012WizardInstallLocationReg' Root='HKLM' Key='SOFTWARE\Microsoft\VisualStudio\SxS\VS7' Name='11.0' Type='directory'>
+        <DirectorySearch Id='VS2012TemplateDir' Path='Common7\IDE\ItemTemplates\CSharp\1033'/>
+      </RegistrySearch>
+    </Property>
+
+    <Property Id='VS2010UL' Secure='yes'>
+      <RegistrySearch Id='VS2010UltimateInstalled' Root='HKLM' Key='SOFTWARE\Microsoft\VisualStudio\10.0\Setup\VS\VSTS' Name='ProductDir' Type='directory'/>
+    </Property>
+    <Property Id='VS2012UL' Secure='yes'>
+      <RegistrySearch Id='VS2012UltimateInstalled' Root='HKLM' Key='SOFTWARE\Microsoft\VisualStudio\11.0\Setup\VS\VSTS' Name='ProductDir' Type='directory'/>
+    </Property>
+    <Condition Message='!(loc.ErrorVSRequirement)'>NOT VS2010UL="" OR NOT VS2012UL=""</Condition>
+
+    <Property Id='ALLUSERS' Value='1' />
+    <Property Id='ARPCOMMENTS' Value='!(loc.Name)'/>
+    <Property Id='ARPNOMODIFY' Value='1'/>
+    <Media Id='1' Cabinet='main.cab' EmbedCab='yes' />
+
+    <Directory Id='TARGETDIR' Name='SourceDir'>
+
+      <Directory Id='CommandLineToolDir' Name='WcfUnit'>
+
+        <Component Id='CommandLineToolComponent' DiskId='1' Guid='{4252C050-A3CA-4F46-8269-4AB5EDCD6D08}'>
+          <File Id='ConsoleAppFile'
+              Name='$(var.WcfUnit.TargetFileName)'
+              KeyPath='yes'
+              Assembly='no'
+              ReadOnly='yes'
+              Vital='yes'
+              Checksum='yes'
+              Source='$(var.WcfUnit.TargetPath)' />
+        </Component>
+
+        <Component Id='LibraryComponent' DiskId='1' Guid='{9B7DE58A-B88F-4FBB-845B-9E1BB829300F}'>
+          <File Id='LibraryFile'
+              Name='$(var.Library.TargetFileName)'
+              KeyPath='yes'
+              Assembly='.net'
+              ReadOnly='yes'
+              Vital='yes'
+              Checksum='yes'
+              Source='$(var.Library.TargetPath)' />
+        </Component>
+
+        <Component Id='VSIntegrationComponent' DiskId='1' Guid='{63068C46-BC63-4D89-9768-BC711A8744D0}'>
+          <File Id='VSIntegrationFile'
+              Name='$(var.VSIntegration.TargetFileName)'
+              KeyPath='yes'
+              Assembly='.net'
+              ReadOnly='yes'
+              Vital='yes'
+              Checksum='yes'
+              Source='$(var.VSIntegration.TargetPath)' />
+        </Component>
+
+      </Directory>
+
+      <Directory Id='WIZARD2010DIR'>
+        <Component Id='VS2010WizardComponent' DiskId='1' Guid='{991C389F-BD50-49A1-AB9E-E49C39A93344}'>
+          <File Id='VS2010WizardFile'
+              Name='WcfUnit10.zip'
+              KeyPath='yes'
+              Assembly='no'
+              ReadOnly='yes'
+              Vital='yes'
+              Checksum='yes'
+              Source='..\..\..\Bin\WcfUnit2010.zip' />
+        </Component>
+      </Directory>
+
+      <Directory Id='WIZARD2012DIR'>
+        <Component Id='VS2012WizardComponent' DiskId='1' Guid='{AA02623A-6A86-4062-AD0B-320D9797DE0A}'>
+          <File Id='VS2012WizardFile'
+              Name='WcfUnit11.zip'
+              KeyPath='yes'
+              Assembly='no'
+              ReadOnly='yes'
+              Vital='yes'
+              Checksum='yes'
+              Source='..\..\..\Bin\WcfUnit2010.zip' />
+        </Component>
+      </Directory>
+
+    </Directory>
+
+    <Feature Id='CommandLineFeature' Level='1'>
+      <ComponentRef Id='CommandLineToolComponent'/>
+      <ComponentRef Id='LibraryComponent'/>
+    </Feature>
+
+    <Feature Id='VS2010IntegrationFeature' Level='1'>
+      <Condition Level='0'>VS2010UL=""</Condition>
+      <ComponentRef Id='VS2010WizardComponent'/>
+      <ComponentRef Id='VSIntegrationComponent'/>
+      <ComponentRef Id='LibraryComponent'/>
+    </Feature>
+
+    <Feature Id='VS2012IntegrationFeature' Level='1'>
+      <Condition Level='0'>VS2012UL=""</Condition>
+      <ComponentRef Id='VS2012WizardComponent'/>
+      <ComponentRef Id='VSIntegrationComponent'/>
+      <ComponentRef Id='LibraryComponent'/>
+    </Feature>
+
+    <CustomAction Id='Devenv2010InstallVsTemplatesAction' Property='DEVENV2010PATH' ExeCommand='/installvstemplates' Execute='deferred' Impersonate='no'/>
+    <CustomAction Id='Devenv2010SetupAction' Property='DEVENV2010PATH' ExeCommand='/setup' Execute='deferred' Impersonate='no'/>
+    <CustomAction Id='Devenv2012InstallVsTemplatesAction' Property='DEVENV2012PATH' ExeCommand='/installvstemplates' Execute='deferred' Impersonate='no'/>
+    <CustomAction Id='Devenv2012SetupAction' Property='DEVENV2012PATH' ExeCommand='/setup' Execute='deferred' Impersonate='no'/>
+
+    <InstallUISequence>
+      <AppSearch Before='LaunchConditions'/>
+      <Custom Action='SetupTargetDirectory' After='LaunchConditions'>NOT TARGETDIR</Custom>
+    </InstallUISequence>
+
+    <InstallExecuteSequence>
+      <AppSearch Before='LaunchConditions'/>
+      <Custom Action='NoDowngrade' After='FindRelatedProducts'>NEWERFOUND</Custom>
+      <Custom Action='SetupTargetDirectory' After='LaunchConditions'>NOT TARGETDIR</Custom>
+      <Custom Action='Devenv2010InstallVsTemplatesAction' After='InstallFiles'>NOT VS2010UL=""</Custom>
+      <Custom Action='Devenv2010SetupAction' After='Devenv2010InstallVsTemplatesAction'>NOT VS2010UL=""</Custom>
+      <Custom Action='Devenv2012InstallVsTemplatesAction' After='InstallFiles'>NOT VS2012UL=""</Custom>
+      <Custom Action='Devenv2012SetupAction' After='Devenv2012InstallVsTemplatesAction'>NOT VS2012UL=""</Custom>
+      <RemoveExistingProducts After='InstallFinalize' />
+    </InstallExecuteSequence>
+
+  </Fragment>
+</Wix>

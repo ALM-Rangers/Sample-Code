@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dictionary>
+  <Words>
+    <Unrecognized>
+      <!--<Word>cb</Word>-->
+    </Unrecognized>
+    <DiscreteExceptions>
+      <Term>ALMRangers</Term>
+      <Term>ToRun</Term>
+      <Term>SwitchBack</Term>
+      <Term>SetBack</Term>
+      <Term>SetOn</Term>
+      <Term>ListOn</Term>
+      <Term>WcfUnit</Term>
+    </DiscreteExceptions>
+    <Recognized>
+      <Word>Asmx</Word>
+      <Word>Deserializer</Word>
+      <Word>Multi</Word>
+      <Word>Formatless</Word>
+      <Word>Namespaced</Word>
+      <Word>svclog</Word>
+      <Word>wcfunit</Word>
+    </Recognized>
+    <Deprecated>
+      <!--<Term PreferredAlternate="EnterpriseServices">ComPlus</Term>-->
+    </Deprecated>
+  </Words>
+  <Acronyms>
+    <CasingExceptions>
+      <Acronym>ALM</Acronym>
+      <Acronym>ASI</Acronym>
+      <Acronym>PM</Acronym>
+      <Acronym>SRM</Acronym>
+    </CasingExceptions>
+  </Acronyms>
+</Dictionary>

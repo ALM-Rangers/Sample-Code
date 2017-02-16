@@ -1,0 +1,30 @@
+<StyleCopSettings Version="105">
+  <GlobalSettings>
+    <CollectionProperty Name="RecognizedWords">
+      <Value>enumerables</Value>
+      <Value>finalizer</Value>
+      <Value>guid</Value>
+      <Value>initialisation</Value>
+      <Value>initialised</Value>
+      <Value>initialises</Value>
+      <Value>initialising</Value>
+      <Value>interop</Value>
+      <Value>moq</Value>
+      <Value>stateful</Value>
+      <Value>sut</Value>
+      <Value>synchronise</Value>
+    </CollectionProperty>
+  </GlobalSettings>
+  <Analyzers>
+    <Analyzer AnalyzerId="StyleCop.CSharp.ReadabilityRules">
+      <Rules>
+        <Rule Name="UseShorthandForNullableTypes">
+          <RuleSettings>
+            <BooleanProperty Name="Enabled">False</BooleanProperty>
+          </RuleSettings>
+        </Rule>
+      </Rules>
+      <AnalyzerSettings />
+    </Analyzer>
+  </Analyzers>
+</StyleCopSettings>

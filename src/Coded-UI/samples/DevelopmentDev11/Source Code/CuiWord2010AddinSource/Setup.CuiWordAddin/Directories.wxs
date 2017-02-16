@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?include ".\Preprocessor.wxi" ?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+
+      <Directory Id="CommonFilesFolder">
+        <Directory Id="MicorsoftShared" Name="Microsoft Shared">
+          <Directory Id="VSTT" Name="VSTT">
+            <Directory Id="VSTT_11_0" Name="11.0">
+              <Directory Id="UITestExtensionPackages" Name="UITestExtensionPackages" />
+            </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+
+      <?if $(var.Platform) = "x64"?>
+      <Directory Id="CommonFiles64Folder">
+        <Directory Id="MicorsoftShared64" Name="Microsoft Shared">
+          <Directory Id="VSTT64" Name="VSTT">
+            <Directory Id="VSTT_11_064" Name="11.0">
+              <Directory Id="UITestExtensionPackages64" Name="UITestExtensionPackages" />
+            </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+      <?endif?>
+
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="VS11_ROOT_FOLDER" Name="Microsoft Visual Studio 11.0">
+          <Directory Id="VS11Common7" Name="Common7">
+            <Directory Id="VS11Common7Ide" Name="IDE">
+              <Directory Id="VS11Common7IdePrivateAssemblies" Name="PrivateAssemblies" />
+            </Directory>
+          </Directory>
+        </Directory>
+      <?if $(var.Platform) = "x64"?>
+      </Directory>
+      <Directory Id="ProgramFiles64Folder">
+      <?endif?>
+        <Directory Id="ProductManufacturer" Name="$(var.Manufacturer)"  >
+          <Directory Id="INSTALLFOLDER" Name="$(var.ProductName)" />
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+</Wix>

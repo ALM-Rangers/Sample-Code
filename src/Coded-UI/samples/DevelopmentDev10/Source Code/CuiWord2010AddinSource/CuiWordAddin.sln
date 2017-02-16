@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCommunication", "WordCommunication\WordCommunication.csproj", "{C1647AD1-E2E4-410D-9DF7-EB23B583F00F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordExtension", "WordExtension\WordExtension.csproj", "{C8CCC8A0-1C59-4771-83F7-5268105773FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FBF009DB-7D92-4CF9-8296-56245615680E}"
+	ProjectSection(SolutionItems) = preProject
+		..\Common\CodedUIWordAddin.ruleset = ..\Common\CodedUIWordAddin.ruleset
+		..\Common\CommonAssemblyInfo.cs = ..\Common\CommonAssemblyInfo.cs
+		CuiWordAddin.vsmdi = CuiWordAddin.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordAddIn", "WordAddIn\WordAddIn.csproj", "{FB2EB63E-7C51-4760-931D-D0B07C331504}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuiWordAddinTests", "CuiWordAddinTests\CuiWordAddinTests.csproj", "{D807A23D-A4D4-4942-B0BD-48A10343BB80}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupX64_CuiWordAddin", "SetupX64_CuiWordAddin\SetupX64_CuiWordAddin.vdproj", "{9B5921EC-889A-4B87-BD1F-04A45AAC6D38}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupX86_CuiWordAddin", "SetupX86_CuiWordAddin\SetupX86_CuiWordAddin.vdproj", "{2D2ED86A-6D14-4A80-AB63-35298C5EB563}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://almrangers.tfspreview.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = WordAddIn\\WordAddIn.csproj
+		SccProjectName1 = WordAddIn
+		SccLocalPath1 = WordAddIn
+		SccProjectUniqueName2 = WordCommunication\\WordCommunication.csproj
+		SccProjectName2 = WordCommunication
+		SccLocalPath2 = WordCommunication
+		SccProjectUniqueName3 = WordExtension\\WordExtension.csproj
+		SccProjectName3 = WordExtension
+		SccLocalPath3 = WordExtension
+		SccProjectUniqueName4 = CuiWordAddinTests\\CuiWordAddinTests.csproj
+		SccProjectName4 = CuiWordAddinTests
+		SccLocalPath4 = CuiWordAddinTests
+		SccProjectUniqueName5 = SetupX64_CuiWordAddin\\SetupX64_CuiWordAddin.vdproj
+		SccProjectName5 = SetupX64_CuiWordAddin
+		SccLocalPath5 = SetupX64_CuiWordAddin
+		SccProjectUniqueName6 = SetupX86_CuiWordAddin\\SetupX86_CuiWordAddin.vdproj
+		SccProjectName6 = SetupX86_CuiWordAddin
+		SccLocalPath6 = SetupX86_CuiWordAddin
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = CuiWordAddin.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1647AD1-E2E4-410D-9DF7-EB23B583F00F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1647AD1-E2E4-410D-9DF7-EB23B583F00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1647AD1-E2E4-410D-9DF7-EB23B583F00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1647AD1-E2E4-410D-9DF7-EB23B583F00F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8CCC8A0-1C59-4771-83F7-5268105773FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8CCC8A0-1C59-4771-83F7-5268105773FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8CCC8A0-1C59-4771-83F7-5268105773FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8CCC8A0-1C59-4771-83F7-5268105773FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB2EB63E-7C51-4760-931D-D0B07C331504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB2EB63E-7C51-4760-931D-D0B07C331504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB2EB63E-7C51-4760-931D-D0B07C331504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB2EB63E-7C51-4760-931D-D0B07C331504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D807A23D-A4D4-4942-B0BD-48A10343BB80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D807A23D-A4D4-4942-B0BD-48A10343BB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D807A23D-A4D4-4942-B0BD-48A10343BB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D807A23D-A4D4-4942-B0BD-48A10343BB80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B5921EC-889A-4B87-BD1F-04A45AAC6D38}.Debug|Any CPU.ActiveCfg = Debug
+		{9B5921EC-889A-4B87-BD1F-04A45AAC6D38}.Release|Any CPU.ActiveCfg = Release
+		{9B5921EC-889A-4B87-BD1F-04A45AAC6D38}.Release|Any CPU.Build.0 = Release
+		{2D2ED86A-6D14-4A80-AB63-35298C5EB563}.Debug|Any CPU.ActiveCfg = Debug
+		{2D2ED86A-6D14-4A80-AB63-35298C5EB563}.Release|Any CPU.ActiveCfg = Release
+		{2D2ED86A-6D14-4A80-AB63-35298C5EB563}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
