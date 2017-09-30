@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------
-// <copyright file="CommonAssemblyInfo.cs" company="Microsoft">(c) Microsoft ALM Rangers This source is subject to the Microsoft Permissive License. See http://www.microsoft.com/resources/sharedsource/licensingbasics/sharedsourcelicenses.mspx. All other rights reserved.</copyright>
+// <copyright file="CommonAssemblyInfo.cs" company="Microsoft">Â© ALM | DevOps Ranger Contributors This source is subject to the Microsoft Permissive License. See http://www.microsoft.com/resources/sharedsource/licensingbasics/sharedsourcelicenses.mspx. All other rights reserved.</copyright>
 //-----------------------------------------------------------------------
 using System.Reflection;
 using System.Resources;
@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("2.0.0.0")]
 [assembly: AssemblyInformationalVersion("2.0.0.0")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2012")]
+[assembly: AssemblyCopyright("Copyright ï¿½ Microsoft 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: NeutralResourcesLanguage("")]
 [assembly: AssemblyCulture("")]

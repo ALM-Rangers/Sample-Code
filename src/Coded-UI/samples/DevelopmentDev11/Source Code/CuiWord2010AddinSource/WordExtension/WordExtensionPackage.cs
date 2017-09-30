@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="WordExtensionPackage.cs" company="Microsoft">(c) Microsoft ALM Rangers This source is subject to the Microsoft Permissive License. See http://www.microsoft.com/resources/sharedsource/licensingbasics/sharedsourcelicenses.mspx. All other rights reserved.</copyright>
+// <copyright file="WordExtensionPackage.cs" company="Microsoft">© ALM | DevOps Ranger Contributors This source is subject to the Microsoft Permissive License. See http://www.microsoft.com/resources/sharedsource/licensingbasics/sharedsourcelicenses.mspx. All other rights reserved.</copyright>
 //-----------------------------------------------------------------------
 // Assembly attribute to denote that this assembly has UITest extensions.
 [assembly: Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage("WordExtensionPackage", typeof(Microsoft.ALMRangers.UITest.Extension.Word.WordExtensionPackage))]
