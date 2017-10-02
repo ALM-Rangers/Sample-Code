@@ -1,6 +1,6 @@
 ﻿//---------------------------------------------------------------------
 // <copyright file="LowLevelSettings.cs" company="Microsoft">
-//    Copyright (c) Microsoft. All rights reserved.
+//    Copyright © ALM | DevOps Ranger Contributors. All rights reserved.
 //    This code is licensed under the MIT License.
 //    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF 
 //    ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED 

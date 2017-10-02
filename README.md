@@ -1,4 +1,4 @@
-# Visual Studio ALM Rangers Sample Code
+# Sample-Code
 
 # Introduction 
 Welcome to our collection of sample code. 
@@ -8,7 +8,7 @@ notice. You bear the risk of using it.
 
 # Samples
 
-##Coded UI Microsoft Word Add-In
+## Coded UI Microsoft Word Add-In
 This sample delivers practical and scenario based sample code and guidance for the Visual Studio Coded UI Microsoft Word Add-in, which extends the Coded UI feature support to Microsoft Word documents.
 
 - Contributor: Bob Hardister
